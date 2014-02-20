@@ -8,7 +8,7 @@ var ConfigLoader = function(options) {
 	});
 	this.initialize.apply(this, arguments);
 },
-	CONFIG_URL = "http://localhost:3000/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
+	CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
 		ERROR: "error"
