@@ -1,0 +1,9 @@
+{
+    "name": "project-settings",
+    "version": "0.0.0",
+    "main": [
+        "jshintrc.json", 
+        "jshintrc-dev.json", 
+        "jsbeautify.json"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+	"name": "vmap-parser",
+	"version": "0.0.0",
+	"author": "gianni ferullo <giannif@gmail.com>",
+	"scripts": {
+		"test": "mocha test",
+		"release": "grunt release",
+		"lint": "jshint src"
+	},
+	"description": "Take a VMAP JSON object and make it into something useable.",
+	"repository": {
+		"type": "git",
+		"url": "https://mtvn-player@github.com/vmap-parser/vmap-parser.git"
+	},
+	"devDependencies": {
+		"grunt": "0.4.x",
+		"testem": "x.x.x",
+		"grunt-contrib": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-rigger": "~0.5.0",
+		"grunt-contrib-watch": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-bumpx": "*",
+		"grunt-testem": "0.x.x",
+		"grunt-push-svn": "~0.1.8",
+		"mocha": "~1.17.1",
+		"grunt-mocha-test": "~0.9.0",
+		"deep-equal": "~0.2.1"
+	},
+	"main": "./dist/amd.node.js",
+	"dependencies": {
+		"lodash": "~2.4.1"
+	}
+}
