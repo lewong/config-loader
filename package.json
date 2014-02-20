@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"author": "gianni ferullo <giannif@gmail.com>",
 	"scripts": {
-		"test": "testem ci -t test/qunit/test.html -l PhantomJS",
+		"test": "testem ci -t dist/test/qunit/test.html -l PhantomJS",
 		"release": "grunt release",
 		"lint": "jshint src"
 	},

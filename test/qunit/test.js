@@ -1,15 +1,17 @@
-/*globals test, asyncTest, ok, ConfigLoader, start, equal*/
+/*globals test, asyncTest, ConfigLoader, start, ok*/
 test("exported", function() {
 	ok(ConfigLoader, "Object Exported");
 });
+
 
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:cms:video:nickjr.com:119998"
 	});
 	cl.on(ConfigLoader.Events.READY, function(event) {
-		equal(event.type, ConfigLoader.Events.READY, "event type READY");
-		equal(event.target, cl, "event target match");
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.READY, "event type READY");
+		ok(event.target === cl, "event target match");
 		var config = event.data;
 		ok(config, "config exists");
 		ok(config.mediaGen, "config.mediaGen exists");
@@ -27,8 +29,9 @@ asyncTest("test error", 2, function() {
 		uri: "mgid:cms:video:nickjr.com:119998"
 	});
 	cl.on(ConfigLoader.Events.ERROR, function(event) {
-		equal(event.type, ConfigLoader.Events.ERROR);
-		equal(event.target, cl, "event target match");
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR);
+		ok(event.target === cl, "event target match");
 		start();
 	});
 	cl.load();

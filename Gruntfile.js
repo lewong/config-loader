@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 				"framework": "qunit"
 			},
 			all: {
-				src: ['test/qunit/test.html'],
+				src: ['dist/test/qunit/test.html'],
 				dest: 'tests.tap'
 			}
 		},

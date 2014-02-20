@@ -1,26 +1,27 @@
 {
-	"name": "config-loader",
-	"version": "0.0.0",
-	"main": [
-		"./dist/config-loader.js",
-		"./dist/config-loader.min.js"
-	],
-	"ignore": [
-		"**/.*",
-		"test",
-		"src",
-		"testem.json",
-		"build",
-		"node_modules",
-		"components"
-	],
-	"dependencies": {
-		"lodash": "*",
-		"backbone": "*",
-		"zepto": "1.1.2",
-		"vmap-parser": "p-js/vmap-parser"
-	},
-	"devDependencies": {
-		"project-settings": "p-js/project-settings"
-	}
+  "name": "config-loader",
+  "version": "0.0.0",
+  "main": [
+    "./dist/config-loader.js",
+    "./dist/config-loader.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "test",
+    "src",
+    "testem.json",
+    "build",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "lodash": "*",
+    "backbone": "*",
+    "zepto": "1.1.2",
+    "vmap-parser": "p-js/vmap-parser"
+  },
+  "devDependencies": {
+    "project-settings": "p-js/project-settings",
+    "qunit": "~1.14.0"
+  }
 }
