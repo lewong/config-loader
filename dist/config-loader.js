@@ -1,5 +1,5 @@
-/* global _, $, VMAPParser */
-var ConfigLoader = (function(_, $, VMAPParser) {
+/* global _, $, VMAPParser, Backbone */
+var ConfigLoader = (function(_, $, Backbone, VMAPParser) {
 	// jshint unused:false
 	/* exported MediaGen */
 	/* global _, VMAPParser */
@@ -78,4 +78,4 @@ var ConfigLoader = (function(_, $, VMAPParser) {
 	};
 	_.extend(ConfigLoader.prototype, Backbone.Events);
 	return ConfigLoader;
-})(_, $, VMAPParser);
+})(_, $, Backbone, VMAPParser);
