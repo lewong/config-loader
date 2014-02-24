@@ -146,6 +146,42 @@
 		}
 		return MIDROLL;
 	}
+	
+	function getOffsetFromItem(type, duration) {
+		switch (type) {
+			case "firstQuartile":
+				return duration / 4;
+			case "midpoint":
+				return duration / 2;
+			case "thirdQuartile":
+				return duration * 3 / 4;
+			case "complete":
+				return duration;
+			default:
+				break;
+		}
+	}
+	
+	function createTrackers(breakId, duration, tracking, trackerStartTime, trackers) {
+		_.each(tracking, function(item) {
+			_.each(item, clean);
+			var offset = parseFloat(item.offset, 10),
+				tracker = {
+					breakId: breakId,
+					event: item.event,
+					url: item.text
+				};
+			if (isNaN(offset)) {
+				offset = getOffsetFromItem(item.event, duration);
+			}
+			if (!isNaN(offset)) {
+				tracker.timeToFire = Math.round(trackerStartTime + offset);
+				// console.log("Fire at", formatTime(tracker.timeToFire), "or " + tracker.timeToFire + " seconds");
+			}
+			// scoped var
+			trackers.push(tracker);
+		});
+	}
 	/**
 	 * @ignore
 	 * VMAP parser
@@ -165,28 +201,11 @@
 				totalDuration,
 				ranges = [];
 	
-			// let's simplify this.
+			// clean up the property names.
 			vmap = vmap["vmap:VMAP"];
 			_.each(vmap, clean);
 			cleanProps(vmap, "AdBreak", "Extensions");
 			cleanProps(vmap.Extensions, "unicornOnce", "requestParameters");
-	
-			// console.log("vmap.js:153 vmap", vmap);
-	
-			function getOffsetFromItem(type, duration) {
-				switch (type) {
-					case "firstQuartile":
-						return duration / 4;
-					case "midpoint":
-						return duration / 2;
-					case "thirdQuartile":
-						return duration * 3 / 4;
-					case "complete":
-						return duration;
-					default:
-						break;
-				}
-			}
 	
 			function processAdPod(rolls, group, offset) {
 				// the start time for the group based on other previous group times.
@@ -210,7 +229,7 @@
 					// the range 
 					adPodRange = adPodRange.concat(_.range(Math.ceil(adStartTime), Math.floor(endTime)));
 					// trackers
-					createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), adStartTime);
+					createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), adStartTime, trackers);
 					var result = {
 						type: getAdType(ad.timeOffset),
 						breakId: AdSource.id,
@@ -227,27 +246,6 @@
 				});
 				ranges.push(_.flatten(adPodRange));
 				return rolls;
-			}
-	
-			function createTrackers(breakId, duration, tracking, trackerStartTime) {
-				_.each(tracking, function(item) {
-					_.each(item, clean);
-					var offset = parseFloat(item.offset, 10),
-						tracker = {
-							breakId: breakId,
-							event: item.event,
-							url: item.text
-						};
-					if (isNaN(offset)) {
-						offset = getOffsetFromItem(item.event, duration);
-					}
-					if (!isNaN(offset)) {
-						tracker.timeToFire = Math.round(trackerStartTime + offset);
-						// console.log("Fire at", formatTime(tracker.timeToFire), "or " + tracker.timeToFire + " seconds");
-					}
-					// scoped var
-					trackers.push(tracker);
-				});
 			}
 	
 			// the whole thing, content and ads.
@@ -268,6 +266,7 @@
 			return {
 				uri: vmap.Extensions.unicornOnce.contenturi,
 				// ranges: ranges, TODO include ranges?
+				contentDuration: parseFloat(vmap.Extensions.unicornOnce.contentlength, 10),
 				totalDuration: totalDuration,
 				trackers: trackers,
 				adBreaks: rolls
@@ -275,8 +274,8 @@
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "0.0.0",
-		build: "02/18/2014 02:52:27 PM"
+		version: "Fri Feb 21 2014 16:12:51",
+		build: "0.0.1"
 	};
 	return VMAPParser;
 }));

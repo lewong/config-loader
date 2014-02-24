@@ -1,5 +1,5 @@
 /* exported ConfigLoader */
-/* global $, _, Backbone, MediaGen */
+/* global $, _, Backbone, MediaGen, Url */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
@@ -21,6 +21,7 @@ ConfigLoader.prototype = {
 		var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
 			interpolate: /\{\{(.+?)\}\}/g
 		});
+		url = Url.setParameters(url, this.options.configParams);
 		$.ajax({
 			url: url,
 			dataType: "json",
@@ -32,6 +33,7 @@ ConfigLoader.prototype = {
 		this.config = config;
 		// TODO, this is temporary.
 		var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
+		mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
 		$.ajax({
 			url: mediaGen,
 			dataType: "json",
