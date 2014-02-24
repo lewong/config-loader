@@ -6,7 +6,13 @@ test("exported", function() {
 
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
-		uri: "mgid:cms:video:nickjr.com:119998"
+		uri: "mgid:cms:video:nickjr.com:119998",
+		configParams: {
+			someConfigParam: "param1"
+		},
+		mediaGenParams: {
+			someMediaGenParam: "param2"
+		}
 	});
 	cl.on(ConfigLoader.Events.READY, function(event) {
 		// equal totally causes the tests to hang :(
