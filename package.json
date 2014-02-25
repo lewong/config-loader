@@ -1,6 +1,6 @@
 {
 	"name": "config-loader",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"author": "gianni ferullo <giannif@gmail.com>",
 	"scripts": {
 		"test": "testem ci -t dist/test/qunit/test.html -l PhantomJS",
@@ -23,7 +23,7 @@
 		"grunt-contrib-clean": "*",
 		"grunt-contrib-copy": "*",
 		"grunt-contrib-concat": "*",
-		"grunt-bumpx": "*",
+		"grunt-bumpx": "~0.1.5",
 		"grunt-testem": "0.x.x",
 		"grunt-push-svn": "0.1.8"
 	},

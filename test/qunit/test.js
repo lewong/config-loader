@@ -42,3 +42,18 @@ asyncTest("test error", 2, function() {
 	});
 	cl.load();
 });
+
+asyncTest("test abort", 1, function() {
+	var cl = new ConfigLoader({
+		uri: "mgid:cms:video:nickjr.com:119998"
+	});
+	cl.on(ConfigLoader.Events.READY, function() {
+		throw "config loaded!";
+	});
+	cl.load();
+	cl.destroy();
+	setTimeout(function() {
+		ok(true, "config not loaded");
+		start();
+	}, 2000);
+});
