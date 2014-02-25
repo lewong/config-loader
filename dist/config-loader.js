@@ -43,24 +43,16 @@ var ConfigLoader = (function(_, $, Backbone, VMAPParser) {
 				interpolate: /\{\{(.+?)\}\}/g
 			});
 			url = Url.setParameters(url, this.options.configParams);
-			$.ajax({
-				url: url,
-				dataType: "json",
-				error: this.onError,
-				success: this.onConfigLoaded
-			});
+			this.request = $.getJSON(url, this.onConfigLoaded);
+			this.request.onerror = this.onError;
 		},
 		onConfigLoaded: function(config) {
 			this.config = config;
 			// TODO, this is temporary.
 			var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
 			mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
-			$.ajax({
-				url: mediaGen,
-				dataType: "json",
-				error: this.onError,
-				success: this.onMediaGenLoaded
-			});
+			this.request = $.getJSON(mediaGen, this.onMediaGenLoaded);
+			this.request.onerror = this.onError;
 		},
 		onMediaGenLoaded: function(mediaGen) {
 			this.config.mediaGen = MediaGen.process(mediaGen);
@@ -76,6 +68,11 @@ var ConfigLoader = (function(_, $, Backbone, VMAPParser) {
 				data: data,
 				target: this
 			});
+		},
+		destroy: function() {
+			if (this.request) {
+				this.request.abort();
+			}
 		}
 	};
 	_.extend(ConfigLoader.prototype, Backbone.Events);
