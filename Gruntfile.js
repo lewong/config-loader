@@ -27,14 +27,13 @@ module.exports = function(grunt) {
 			}
 		},
 		rig: {
-			options: {
-				processContent: function(content) {
-					return grunt.template.process(content);
-				}
-			},
 			devel: {
 				src: ['src/build/<%= pkg.name %>.js'],
 				dest: 'dist/<%= pkg.name %>.js'
+			},
+			bundled: {
+				src: ['src/build/<%= pkg.name %>-bundled.js'],
+				dest: 'dist/<%= pkg.name %>-bundled.js'
 			}
 		},
 		bump: {
@@ -50,14 +49,6 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
-			options: {
-				processContent: function(content, file) {
-					if (file.indexOf("config-loader") === -1) {
-						return content;
-					}
-					return grunt.template.process(content);
-				}
-			},
 			code: {
 				expand: true,
 				cwd: 'dist/',
@@ -87,7 +78,7 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: ['Gruntfile.js', 'src/*.*', 'test/**/*'],
+			files: ['Gruntfile.js', 'src/**/*', 'test/**/*'],
 			tasks: ['default']
 		}
 	});
