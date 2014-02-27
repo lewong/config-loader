@@ -1,5 +1,5 @@
 /* exported ConfigLoader */
-/* global $, _, Backbone, MediaGen, Url */
+/* global $, _, Backbone, MediaGen, Config, Url */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
@@ -8,7 +8,8 @@ var ConfigLoader = function(options) {
 	});
 	this.initialize.apply(this, arguments);
 },
-	CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
+	// CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
+	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
 		ERROR: "error"
@@ -22,16 +23,28 @@ ConfigLoader.prototype = {
 			interpolate: /\{\{(.+?)\}\}/g
 		});
 		url = Url.setParameters(url, this.options.configParams);
-		this.request = $.getJSON(url, this.onConfigLoaded);
-		this.request.onerror = this.onError;
+		this.request = $.ajax({
+			url: url,
+			dataType: "json",
+			success: this.onConfigLoaded,
+			error: this.onError
+		});
 	},
 	onConfigLoaded: function(config) {
-		this.config = config;
+		if (config.config) {
+			// PMT returns a nested config object in the config response.
+			config = config.config;
+		}
+		this.config = Config.process(config, this.options);
 		// TODO, this is temporary.
 		var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
 		mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
-		this.request = $.getJSON(mediaGen, this.onMediaGenLoaded);
-		this.request.onerror = this.onError;
+		this.request = $.ajax({
+			url: mediaGen,
+			dataType: "json",
+			success: this.onMediaGenLoaded,
+			error: this.onError
+		});
 	},
 	onMediaGenLoaded: function(mediaGen) {
 		this.config.mediaGen = MediaGen.process(mediaGen);
@@ -54,4 +67,6 @@ ConfigLoader.prototype = {
 		}
 	}
 };
+ConfigLoader.version = "@@version";
+ConfigLoader.build = "@@timestamp";
 _.extend(ConfigLoader.prototype, Backbone.Events);
