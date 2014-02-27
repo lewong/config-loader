@@ -17232,6 +17232,8 @@ var ConfigLoader = function() {
 			}
 		}
 	};
+	ConfigLoader.version = "@@version";
+	ConfigLoader.build = "@@timestamp";
 	_.extend(ConfigLoader.prototype, Backbone.Events);
 	return ConfigLoader;
 }.apply(this);

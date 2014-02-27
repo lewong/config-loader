@@ -119,6 +119,8 @@ var ConfigLoader = (function(_, $, Backbone, VMAPParser, Url) {
 			}
 		}
 	};
+	ConfigLoader.version = "0.3.0";
+	ConfigLoader.build = "Thu Feb 27 2014 18:41:28";
 	_.extend(ConfigLoader.prototype, Backbone.Events);
 	return ConfigLoader;
 })(_, $, Backbone, VMAPParser, Url);

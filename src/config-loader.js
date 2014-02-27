@@ -67,4 +67,6 @@ ConfigLoader.prototype = {
 		}
 	}
 };
+ConfigLoader.version = "@@version";
+ConfigLoader.build = "@@timestamp";
 _.extend(ConfigLoader.prototype, Backbone.Events);
