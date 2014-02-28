@@ -7,6 +7,7 @@ test("exported", function() {
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:cms:video:nickjr.com:119998",
+		configURL: "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 		configParams: {
 			someConfigParam: "param1"
 		},
@@ -35,6 +36,7 @@ asyncTest("test error", 2, function() {
 		uri: "mgid:cms:video:nickjr.com:119998"
 	});
 	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test.js:39 event.data", event.data);
 		// equal totally causes the tests to hang :(
 		ok(event.type === ConfigLoader.Events.ERROR);
 		ok(event.target === cl, "event target match");

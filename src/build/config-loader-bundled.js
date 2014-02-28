@@ -2,17 +2,12 @@ var ConfigLoader = function() {
 	"use strict";
 	var Backbone, _, $;
 	//= ../../components/jquery/jquery.js
-	//= ../../components/lodash/dist/lodash.underscore.js
+	//= ../../components/underscore/underscore.js
 	_ = this._;
 	$ = this.$;
-	(function() {
-		//= ../../components/backbone/backbone.js
-		Backbone = this.Backbone;
-		Backbone.$ = this.$;
-	}).apply({
-		_: _,
-		$: $
-	});
+	//= ../../components/backbone/backbone.js
+	Backbone = this.Backbone;
+	Backbone.$ = this.$;
 	//= ../../components/vmap-parser/dist/vmap-parser.js
 	//= ../../components/url-util/dist/url-util.js
 	//= ../media-gen.js
