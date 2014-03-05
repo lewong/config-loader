@@ -1,5 +1,5 @@
-/* global _, $, VMAPParser, Backbone, Url */
-var ConfigLoader = (function(_, $, Backbone, VMAPParser, Url) {
+/* global _, VMAPParser, Url */
+var ConfigLoader = (function(_, VMAPParser, Url) {
 	// jshint unused:false
 	/* exported Request */
 	var Request = function(url, success, error) {
@@ -229,7 +229,7 @@ var ConfigLoader = (function(_, $, Backbone, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Wed Mar 05 2014 15:43:36";
+	ConfigLoader.build = "Wed Mar 05 2014 15:58:24";
 	EventEmitter.convert(ConfigLoader.prototype);
 	return ConfigLoader;
-})(_, $, Backbone, VMAPParser, Url);
+})(_, VMAPParser, Url);

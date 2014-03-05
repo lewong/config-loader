@@ -274,8 +274,8 @@
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "Fri Feb 21 2014 16:12:51",
-		build: "0.0.1"
+		version: "Mon Mar 03 2014 16:35:43",
+		build: "0.1.0"
 	};
 	return VMAPParser;
 }));
