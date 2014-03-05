@@ -1,5 +1,5 @@
 /* exported ConfigLoader */
-/* global $, _, Backbone, MediaGen, Config, Url */
+/* global _, EventEmitter, MediaGen, Config, Url, Request */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
@@ -23,12 +23,11 @@ ConfigLoader.prototype = {
 			interpolate: /\{\{(.+?)\}\}/g
 		});
 		url = Url.setParameters(url, this.options.configParams);
-		this.request = $.ajax({
-			url: url,
-			dataType: "json",
-			success: this.onConfigLoaded,
-			error: this.onError
-		});
+		this.request = new Request(
+			url,
+			this.onConfigLoaded,
+			this.onError
+		);
 	},
 	onConfigLoaded: function(config) {
 		if (config.config) {
@@ -39,23 +38,22 @@ ConfigLoader.prototype = {
 		// TODO, this is temporary.
 		var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
 		mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
-		this.request = $.ajax({
-			url: mediaGen,
-			dataType: "json",
-			success: this.onMediaGenLoaded,
-			error: this.onError
-		});
+		this.request = new Request(
+			mediaGen,
+			this.onMediaGenLoaded,
+			this.onError
+		);
 	},
 	onMediaGenLoaded: function(mediaGen) {
 		this.config.mediaGen = MediaGen.process(mediaGen);
-		this.trigger(Events.READY, {
+		this.emit(Events.READY, {
 			type: Events.READY,
 			data: this.config,
 			target: this
 		});
 	},
 	onError: function(data) {
-		this.trigger(Events.ERROR, {
+		this.emit(Events.ERROR, {
 			type: Events.ERROR,
 			data: data,
 			target: this
@@ -69,4 +67,4 @@ ConfigLoader.prototype = {
 };
 ConfigLoader.version = "@@version";
 ConfigLoader.build = "@@timestamp";
-_.extend(ConfigLoader.prototype, Backbone.Events);
+EventEmitter.convert(ConfigLoader.prototype);
