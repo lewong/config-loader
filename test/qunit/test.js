@@ -7,7 +7,6 @@ test("exported", function() {
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:cms:video:nickjr.com:119998",
-		configURL: "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 		configParams: {
 			someConfigParam: "param1"
 		},

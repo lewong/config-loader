@@ -1,32 +1,32 @@
 {
-    "name": "config-loader",
-    "version": "0.4.0",
-    "author": "gianni ferullo <giannif@gmail.com>",
-    "scripts": {
-        "test": "testem ci -t dist/test/qunit/test.html -l PhantomJS && testem ci -t dist/test/qunit/test-bundled.html -l PhantomJS",
-        "release": "grunt release",
-        "lint": "jshint src"
-    },
-    "description": "Load a config, then load the media gen, then parse the vmap, and send an event.",
-    "repository": {
-        "type": "git",
-        "url": "https://mtvn-player@github.com/config-loader/config-loader.git"
-    },
-    "devDependencies": {
-        "grunt": "0.4.x",
-        "testem": "x.x.x",
-        "grunt-contrib": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-rigger": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-contrib-jshint": "*",
-        "grunt-contrib-clean": "*",
-        "grunt-contrib-copy": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-bumpx": "~0.1.5",
-        "grunt-testem": "0.x.x",
-        "grunt-push-svn": "0.1.8",
-        "grunt-replace": "~0.6.2"
-    },
-    "main": "./dist/amd.node.js"
+	"name": "config-loader",
+	"version": "0.4.0",
+	"author": "gianni ferullo <giannif@gmail.com>",
+	"scripts": {
+		"test": "testem ci -t dist/test/qunit/test.html -l PhantomJS && testem ci -t dist/test/qunit/test-bundled.html -l PhantomJS",
+		"release": "grunt release",
+		"lint": "jshint src"
+	},
+	"description": "Load a config, then load the media gen, then parse the vmap, and send an event.",
+	"repository": {
+		"type": "git",
+		"url": "https://mtvn-player@github.com/config-loader/config-loader.git"
+	},
+	"devDependencies": {
+		"grunt": "0.4.x",
+		"testem": "x.x.x",
+		"grunt-contrib": "*",
+		"grunt-contrib-uglify": "~0.3.2",
+		"grunt-rigger": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-bumpx": "~0.1.5",
+		"grunt-testem": "0.x.x",
+		"grunt-push-svn": "0.1.8",
+		"grunt-replace": "~0.6.2"
+	},
+	"main": "./dist/amd.node.js"
 }
