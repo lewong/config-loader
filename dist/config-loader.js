@@ -198,9 +198,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				config = config.config;
 			}
 			this.config = Config.process(config, this.options);
-			// TODO, this is temporary.
-			var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
-			mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
+			var mediaGen = Url.setParameters(config.mediaGen, this.options.mediaGenParams);
 			this.request = new Request(
 				mediaGen,
 				this.onMediaGenLoaded,
@@ -229,7 +227,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Fri Mar 07 2014 10:47:52";
+	ConfigLoader.build = "Fri Mar 07 2014 13:28:21";
 	EventEmitter.convert(ConfigLoader.prototype);
 	return ConfigLoader;
 })(_, VMAPParser, Url);

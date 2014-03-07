@@ -2272,9 +2272,7 @@ var ConfigLoader = (function() {
 				config = config.config;
 			}
 			this.config = Config.process(config, this.options);
-			// TODO, this is temporary.
-			var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
-			mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
+			var mediaGen = Url.setParameters(config.mediaGen, this.options.mediaGenParams);
 			this.request = new Request(
 				mediaGen,
 				this.onMediaGenLoaded,
