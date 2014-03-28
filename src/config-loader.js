@@ -8,7 +8,6 @@ var ConfigLoader = function(options) {
 	});
 	this.initialize.apply(this, arguments);
 },
-	// CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
@@ -17,6 +16,7 @@ var ConfigLoader = function(options) {
 ConfigLoader.prototype = {
 	initialize: function() {
 		_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError");
+		EventEmitter.convert(this);
 	},
 	load: function() {
 		var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
@@ -43,12 +43,21 @@ ConfigLoader.prototype = {
 		);
 	},
 	onMediaGenLoaded: function(mediaGen) {
-		this.config.mediaGen = MediaGen.process(mediaGen);
-		this.emit(Events.READY, {
-			type: Events.READY,
-			data: this.config,
-			target: this
-		});
+		var error;
+		try {
+			mediaGen = MediaGen.process(mediaGen);
+		} catch (e) {
+			error = true;
+			this.onError(e);
+		}
+		if (!error) {
+			this.config.mediaGen = mediaGen;
+			this.emit(Events.READY, {
+				type: Events.READY,
+				data: this.config,
+				target: this
+			});
+		}
 	},
 	onError: function(data) {
 		this.emit(Events.ERROR, {
@@ -65,4 +74,3 @@ ConfigLoader.prototype = {
 };
 ConfigLoader.version = "@@version";
 ConfigLoader.build = "@@timestamp";
-EventEmitter.convert(ConfigLoader.prototype);

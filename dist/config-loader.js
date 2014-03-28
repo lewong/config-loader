@@ -116,16 +116,14 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	/* global _, VMAPParser */
 	var MediaGen = {
 		process: function(mediaGen) {
-			if (mediaGen) {
-				if (_.isString(mediaGen)) {
-					mediaGen = JSON.parse(mediaGen);
-				}
-				var p = mediaGen.package;
-				if (p && p.item) {
-					mediaGen.vmap = VMAPParser.process(p.item.vmap);
-					delete mediaGen.package;
-					delete p.item;
-				}
+			if (_.isString(mediaGen)) {
+				mediaGen = JSON.parse(mediaGen);
+			}
+			var p = mediaGen.package;
+			if (p && p.item) {
+				mediaGen.vmap = VMAPParser.process(p.item.vmap);
+				delete mediaGen.package;
+				delete p.item;
 			}
 			return mediaGen;
 		}
@@ -171,7 +169,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		});
 		this.initialize.apply(this, arguments);
 	},
-		// CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 		CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
 		Events = ConfigLoader.Events = {
 			READY: "ready",
@@ -180,6 +177,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	ConfigLoader.prototype = {
 		initialize: function() {
 			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError");
+			EventEmitter.convert(this);
 		},
 		load: function() {
 			var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
@@ -206,12 +204,21 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			);
 		},
 		onMediaGenLoaded: function(mediaGen) {
-			this.config.mediaGen = MediaGen.process(mediaGen);
-			this.emit(Events.READY, {
-				type: Events.READY,
-				data: this.config,
-				target: this
-			});
+			var error;
+			try {
+				mediaGen = MediaGen.process(mediaGen);
+			} catch (e) {
+				error = true;
+				this.onError(e);
+			}
+			if (!error) {
+				this.config.mediaGen = mediaGen;
+				this.emit(Events.READY, {
+					type: Events.READY,
+					data: this.config,
+					target: this
+				});
+			}
 		},
 		onError: function(data) {
 			this.emit(Events.ERROR, {
@@ -227,7 +234,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Fri Mar 07 2014 13:28:21";
-	EventEmitter.convert(ConfigLoader.prototype);
+	ConfigLoader.build = "Fri Mar 28 2014 11:04:29";
 	return ConfigLoader;
 })(_, VMAPParser, Url);
