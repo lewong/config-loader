@@ -73,8 +73,8 @@ module.exports = function(grunt) {
 					src: "dist/<%= pkg.name %>.js",
 					dest: "dist/<%= pkg.name %>.js"
 				}, {
-					src: "dist/amd.node.js",
-					dest: "dist/amd.node.js"
+					src: "dist/<%= pkg.name %>-bundled.js",
+					dest: "dist/<%= pkg.name %>-bundled.js"
 				}]
 			}
 		},

@@ -1,18 +1,14 @@
 /*globals test, asyncTest, ConfigLoader, start, ok*/
+/* jshint devel:true */
 test("exported", function() {
 	ok(ConfigLoader, "Object Exported");
 });
 
-
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:cms:video:nickjr.com:119998",
-		configURL: "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
 		configParams: {
 			someConfigParam: "param1"
-		},
-		mediaGenParams: {
-			someMediaGenParam: "param2"
 		}
 	});
 	cl.on(ConfigLoader.Events.READY, function(event) {
@@ -36,13 +32,28 @@ asyncTest("test error", 2, function() {
 		uri: "mgid:cms:video:nickjr.com:119998"
 	});
 	cl.on(ConfigLoader.Events.ERROR, function(event) {
-		console.log("test.js:39 event.data", event.data);
 		// equal totally causes the tests to hang :(
-		ok(event.type === ConfigLoader.Events.ERROR);
-		ok(event.target === cl, "event target match");
+		ok(event.type === ConfigLoader.Events.ERROR, "async test error, type");
+		ok(event.target === cl, "async test error, event target match");
 		start();
 	});
 	cl.load();
+});
+
+asyncTest("test mediaGen parser error", 2, function() {
+	var cl = new ConfigLoader({
+		uri: "mgid:cms:video:nickjr.com:119998"
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test mediaGen parser error:", event.data);
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR, "event type");
+		ok(event.target === cl, "event target match");
+		start();
+	});
+	setTimeout(function() {
+		cl.onMediaGenLoaded(undefined);
+	}, 500);
 });
 
 asyncTest("test abort", 1, function() {
