@@ -6,7 +6,18 @@ var Request = function(url, success, error) {
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			// Success!
-			success(JSON.parse(request.responseText));
+			var result,
+				err;
+			try {
+				result = JSON.parse(request.responseText);
+			} catch (e) {
+				err = e;
+			}
+			if (result) {
+				success(result);
+			} else {
+				error(err);
+			}
 		} else {
 			// We reached our target server, but it returned an error
 			error(request.status);

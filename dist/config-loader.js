@@ -9,7 +9,18 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
 				// Success!
-				success(JSON.parse(request.responseText));
+				var result,
+					err;
+				try {
+					result = JSON.parse(request.responseText);
+				} catch (e) {
+					err = e;
+				}
+				if (result) {
+					success(result);
+				} else {
+					error(err);
+				}
 			} else {
 				// We reached our target server, but it returned an error
 				error(request.status);
@@ -115,17 +126,31 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	/* exported MediaGen */
 	/* global _, VMAPParser */
 	var MediaGen = {
+		getItem: function(p) {
+			if (p && p.item) {
+				return p.item;
+			} else {
+				return p.video.item;
+			}
+		},
 		process: function(mediaGen) {
 			if (_.isString(mediaGen)) {
 				mediaGen = JSON.parse(mediaGen);
 			}
-			var p = mediaGen.package;
-			if (p && p.item) {
-				mediaGen.vmap = VMAPParser.process(p.item.vmap);
-				delete mediaGen.package;
-				delete p.item;
+			var item = this.getItem(mediaGen.package),
+				vmapItem;
+			if (_.isArray(item)) {
+				// if it's an array, find the item with a vmap property.
+				vmapItem = _.find(item, function(maybeVmap) {
+					return _.isObject(maybeVmap.vmap);
+				});
+			} else if (_.isObject(item) && item.vmap) {
+				vmapItem = item;
 			}
-			return mediaGen;
+			// return only the vmap item.
+			// and process only the vmap.
+			vmapItem.vmap = VMAPParser.process(vmapItem.vmap);
+			return vmapItem;
 		}
 	};
 	/* exported Config */
@@ -165,11 +190,22 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		this.options = options || {};
 		_.defaults(options, {
 			feed: true,
-			mediaGen: false
+			mediaGen: false,
+			configParams: _.defaults(options.configParams || {}, {
+				returntype: "config",
+				configtype: "vmap",
+				uri: options.uri
+			})
 		});
 		this.initialize.apply(this, arguments);
 	},
-		CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
+		template = function(template, data) {
+			template = template.replace(/\{{1,}/g, "{{").replace(/\}{1,}/g, "}}");
+			return _.template(template, data, {
+				interpolate: /\{\{(.+?)\}\}/g
+			});
+		},
+		CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
 		Events = ConfigLoader.Events = {
 			READY: "ready",
 			ERROR: "error"
@@ -180,9 +216,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			EventEmitter.convert(this);
 		},
 		load: function() {
-			var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
-				interpolate: /\{\{(.+?)\}\}/g
-			});
+			var url = template(this.options.configURL || CONFIG_URL, this.options, {});
 			url = Url.setParameters(url, this.options.configParams);
 			this.request = new Request(
 				url,
@@ -196,12 +230,18 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				config = config.config;
 			}
 			this.config = Config.process(config, this.options);
-			var mediaGen = Url.setParameters(config.mediaGen, this.options.mediaGenParams);
-			this.request = new Request(
-				mediaGen,
-				this.onMediaGenLoaded,
-				this.onError
-			);
+			// the config property for the mediaGen can be specified.
+			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+			if (!mediaGen) {
+				this.onError("no media gen specified");
+			} else {
+				mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
+				this.request = new Request(
+					mediaGen,
+					this.onMediaGenLoaded,
+					this.onError
+				);
+			}
 		},
 		onMediaGenLoaded: function(mediaGen) {
 			var error;
@@ -234,6 +274,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Fri Mar 28 2014 11:04:29";
+	ConfigLoader.build = "Tue Apr 01 2014 14:46:09";
 	return ConfigLoader;
 })(_, VMAPParser, Url);

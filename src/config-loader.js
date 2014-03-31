@@ -4,11 +4,22 @@ var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
 		feed: true,
-		mediaGen: false
+		mediaGen: false,
+		configParams: _.defaults(options.configParams || {}, {
+			returntype: "config",
+			configtype: "vmap",
+			uri: options.uri
+		})
 	});
 	this.initialize.apply(this, arguments);
 },
-	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
+	template = function(template, data) {
+		template = template.replace(/\{{1,}/g, "{{").replace(/\}{1,}/g, "}}");
+		return _.template(template, data, {
+			interpolate: /\{\{(.+?)\}\}/g
+		});
+	},
+	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
 		ERROR: "error"
@@ -19,9 +30,7 @@ ConfigLoader.prototype = {
 		EventEmitter.convert(this);
 	},
 	load: function() {
-		var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
-			interpolate: /\{\{(.+?)\}\}/g
-		});
+		var url = template(this.options.configURL || CONFIG_URL, this.options, {});
 		url = Url.setParameters(url, this.options.configParams);
 		this.request = new Request(
 			url,
@@ -35,12 +44,18 @@ ConfigLoader.prototype = {
 			config = config.config;
 		}
 		this.config = Config.process(config, this.options);
-		var mediaGen = Url.setParameters(config.mediaGen, this.options.mediaGenParams);
-		this.request = new Request(
-			mediaGen,
-			this.onMediaGenLoaded,
-			this.onError
-		);
+		// the config property for the mediaGen can be specified.
+		var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+		if (!mediaGen) {
+			this.onError("no media gen specified");
+		} else {
+			mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
+			this.request = new Request(
+				mediaGen,
+				this.onMediaGenLoaded,
+				this.onError
+			);
+		}
 	},
 	onMediaGenLoaded: function(mediaGen) {
 		var error;

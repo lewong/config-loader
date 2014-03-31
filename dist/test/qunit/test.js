@@ -26,6 +26,49 @@ asyncTest("config loader", 7, function() {
 	cl.load();
 });
 
+asyncTest("media gen property", 7, function() {
+	var cl = new ConfigLoader({
+		uri: "mgid:uma:videolist:mtv.com:1712673",
+		mediaGenProperty: "brightcove_mediagenRootURL",
+		mediaGenURL: "data/mediaGen.json",
+		configParams: {
+			ref: "http://media.mtvnservices.com/player/api/xbox/MTV_App_XBoxone_v1",
+			someConfigParam: "param1"
+		}
+	});
+	cl.on(ConfigLoader.Events.READY, function(event) {
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.READY, "event type READY");
+		ok(event.target === cl, "event target match");
+		var config = event.data;
+		ok(config, "config exists");
+		ok(config.mediaGen, "config.mediaGen exists");
+		ok(config.mediaGen.vmap, "config.mediaGen.vmap exists");
+		ok(config.mediaGen.vmap.adBreaks, "config.mediaGen.vmap.adBreaks exists");
+		ok(config.mediaGen.vmap.trackers, "config.mediaGen.vmap.trackers exists");
+		console.log("test.js:49 config", config);
+		start();
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test.js:49 event", event.data);
+		ok(false, "error thrown");
+		start();
+	});
+	cl.load();
+});
+
+asyncTest("json parse error", 1, function() {
+	var cl = new ConfigLoader({
+		configURL: "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=html&stage=d"
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test.js:49 event", event.data);
+		ok(true, "error thrown");
+		start();
+	});
+	cl.load();
+});
+
 asyncTest("test error", 2, function() {
 	var cl = new ConfigLoader({
 		configURL: "http://google.com",
