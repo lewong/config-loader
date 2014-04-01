@@ -1,4 +1,13 @@
 
+0.4.0 / 2014-04-01 
+==================
+
+ * `mediaGenProperty` the name of the config property that contains the mediaGen URL.
+ * Handling errors better.
+ * Wrap VMAP/mediaGen parse in a try/catch and emit error event.
+ * Remove parsing of ampersands, no longer needed.
+ * removing $ and Backbone deps, using micro libs and custom code.
+
 0.3.0 / 2014-02-27 
 ==================
 

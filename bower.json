@@ -1,6 +1,6 @@
 {
 	"name": "config-loader",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"main": [
 		"./dist/config-loader.js",
 		"./dist/config-loader.min.js"
@@ -15,9 +15,7 @@
 		"components"
 	],
 	"dependencies": {
-		"lodash": "*",
-		"backbone": "*",
-		"zepto": "1.1.2",
+		"underscore": "*",
 		"vmap-parser": "p-js/vmap-parser",
 		"url-util": "p-js/url-util",
 		"jquery": "1.10.2"
@@ -25,8 +23,5 @@
 	"devDependencies": {
 		"project-settings": "p-js/project-settings",
 		"qunit": "~1.14.0"
-	},
-	"resolutions": {
-		"jquery": "1.10.2"
 	}
 }

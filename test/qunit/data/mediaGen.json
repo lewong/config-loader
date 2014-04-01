@@ -1,0 +1,188 @@
+{
+	"package": {
+		"version": "1.7.4",
+		"video": {
+			"item": [{
+				"origination_date": "04-01-2014 12:46:38",
+				"vmap":
+
+
+
+
+
+
+
+
+
+				{
+					"vmap:VMAP": {
+						"@version": "1.0",
+						"@xmlns:uo": "uo",
+						"@xmlns:vmap": "vmap",
+						"@xmlns:xsi": "xsi",
+						"vmap:Extensions": {
+							"uo:unicornOnce": {
+								"@ttl": "600",
+								"@contenturi": "http://api41-phx.unicornmedia.com/now/stitched/mp4/31e0061b-9a2a-4287-9acf-0a2917574471/98ae8fea-5604-4feb-af9d-ccd31cc78e0a/3a41c6e4-93a3-4108-8995-64ffca7b9106/26bea308-6bfc-4893-9b19-f90b2b403a1c/content.mp4?oasid=3a360f5f-2f65-4c0a-b201-5f0530624079",
+								"@contentlength": "2445",
+								"@payloadlength": "2445",
+								"@contextid": "3a360f5f-2f65-4c0a-b201-5f0530624079"
+							},
+							"uo:contentImpressions": null,
+							"uo:requestParameters": {
+								"uo:parameter": [{
+									"@key": "csid",
+									"@value": "10728175"
+								}, {
+									"@key": "midrolls",
+									"@value": ";vindico_dv_app=unicorn&vindico_dv_sdk=5.4&vindico_dv_type=Mozilla%2f5.0%20(Macintosh%3b%20Intel%20Mac%20OS%20X%2010_9_2)%20AppleWebKit%2f537.36%20(KHTML,%20like%20Gecko)%20Chrome%2f35.0.1895.0%20Safari%2f537.36;"
+								}, {
+									"@key": "caid",
+									"@value": "mgid:uma:videolist:mtv.com:1712673"
+								}]
+							},
+							"uo:timedTextURL": {
+								"#cdata-section": "http://api41-phx.unicornmedia.com/tt/31e0061b-9a2a-4287-9acf-0a2917574471/26bea308-6bfc-4893-9b19-f90b2b403a1c/3a360f5f-2f65-4c0a-b201-5f0530624079/en/content.xml"
+							}
+						}
+					}
+				}
+
+
+				,
+				"transcript": [{
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947876",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a20.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s1.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a2.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s1_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947877",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a19.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s2.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a9.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s2_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947878",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a18.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s3.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a20.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s3_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947879",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a17.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s4.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a11.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s4_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947880",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s5.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a18.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s5_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947881",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a15.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s6.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a13.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s6_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:947882",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a14.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s7.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_s7_captions_en.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:948047",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a19.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_next.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a9.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_next_captions_en.dfxp.xml"
+					}]
+				}],
+				"beacon": [{
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947876&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947877&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947878&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947879&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947880&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947881&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:947882&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:948047&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}]
+			}, {
+				"format": "png",
+				"xPercent": "95",
+				"yPercent": "5",
+				"startTime": "0",
+				"duration": "12000",
+				"width": "41",
+				"height": "28",
+				"src": "http://www.mtv.com/player/assets/images/bug.png",
+				"placement": "overlay"
+			}]
+		}
+	}
+}

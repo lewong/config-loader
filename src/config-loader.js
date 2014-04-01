@@ -1,15 +1,25 @@
 /* exported ConfigLoader */
-/* global $, _, Backbone, MediaGen, Config, Url */
+/* global _, EventEmitter, MediaGen, Config, Url, Request */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
 		feed: true,
-		mediaGen: false
+		mediaGen: false,
+		configParams: _.defaults(options.configParams || {}, {
+			returntype: "config",
+			configtype: "vmap",
+			uri: options.uri
+		})
 	});
 	this.initialize.apply(this, arguments);
 },
-	// CONFIG_URL = "http://pjs-services-dev-cmtnxgpqy5.elasticbeanstalk.com/config/{{uri}}/?feed={{feed}}&mediaGen={{mediaGen}}",
-	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=vmap&uri={{uri}}",
+	template = function(template, data) {
+		template = template.replace(/\{{1,}/g, "{{").replace(/\}{1,}/g, "}}");
+		return _.template(template, data, {
+			interpolate: /\{\{(.+?)\}\}/g
+		});
+	},
+	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
 		ERROR: "error"
@@ -17,18 +27,16 @@ var ConfigLoader = function(options) {
 ConfigLoader.prototype = {
 	initialize: function() {
 		_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError");
+		EventEmitter.convert(this);
 	},
 	load: function() {
-		var url = _.template(this.options.configURL || CONFIG_URL, this.options, {
-			interpolate: /\{\{(.+?)\}\}/g
-		});
+		var url = template(this.options.configURL || CONFIG_URL, this.options, {});
 		url = Url.setParameters(url, this.options.configParams);
-		this.request = $.ajax({
-			url: url,
-			dataType: "json",
-			success: this.onConfigLoaded,
-			error: this.onError
-		});
+		this.request = new Request(
+			url,
+			this.onConfigLoaded,
+			this.onError
+		);
 	},
 	onConfigLoaded: function(config) {
 		if (config.config) {
@@ -36,26 +44,38 @@ ConfigLoader.prototype = {
 			config = config.config;
 		}
 		this.config = Config.process(config, this.options);
-		// TODO, this is temporary.
-		var mediaGen = config.mediaGen.replace(/&amp;/gi, "&");
-		mediaGen = Url.setParameters(mediaGen, this.options.mediaGenParams);
-		this.request = $.ajax({
-			url: mediaGen,
-			dataType: "json",
-			success: this.onMediaGenLoaded,
-			error: this.onError
-		});
+		// the config property for the mediaGen can be specified.
+		var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+		if (!mediaGen) {
+			this.onError("no media gen specified");
+		} else {
+			mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
+			this.request = new Request(
+				mediaGen,
+				this.onMediaGenLoaded,
+				this.onError
+			);
+		}
 	},
 	onMediaGenLoaded: function(mediaGen) {
-		this.config.mediaGen = MediaGen.process(mediaGen);
-		this.trigger(Events.READY, {
-			type: Events.READY,
-			data: this.config,
-			target: this
-		});
+		var error;
+		try {
+			mediaGen = MediaGen.process(mediaGen);
+		} catch (e) {
+			error = true;
+			this.onError(e);
+		}
+		if (!error) {
+			this.config.mediaGen = mediaGen;
+			this.emit(Events.READY, {
+				type: Events.READY,
+				data: this.config,
+				target: this
+			});
+		}
 	},
 	onError: function(data) {
-		this.trigger(Events.ERROR, {
+		this.emit(Events.ERROR, {
 			type: Events.ERROR,
 			data: data,
 			target: this
@@ -69,4 +89,3 @@ ConfigLoader.prototype = {
 };
 ConfigLoader.version = "@@version";
 ConfigLoader.build = "@@timestamp";
-_.extend(ConfigLoader.prototype, Backbone.Events);
