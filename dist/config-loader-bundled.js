@@ -2348,6 +2348,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Tue Apr 01 2014 14:46:09";
+	ConfigLoader.build = "Tue Apr 01 2014 14:52:29";
 	return ConfigLoader;
 })();
