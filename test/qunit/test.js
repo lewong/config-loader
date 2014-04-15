@@ -113,6 +113,21 @@ asyncTest("test error", 2, function() {
 	cl.load();
 });
 
+asyncTest("test error response parser error", 3, function() {
+	var cl = new ConfigLoader({
+		configURL: "data/error.json"
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test mediaGen parser error:", event.data);
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR, "event type");
+		ok(event.target === cl, "event target match");
+		ok(event.data === "json formatted error", "error message match");
+		start();
+	});
+	cl.load();
+});
+
 asyncTest("test mediaGen parser error", 2, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:cms:video:nickjr.com:119998"

@@ -43,6 +43,10 @@ ConfigLoader.prototype = {
 			// PMT returns a nested config object in the config response.
 			config = config.config;
 		}
+		if (config.error) {
+			this.onError(config.error);
+			return;
+		}
 		this.config = Config.process(config, this.options);
 		// the config property for the mediaGen can be specified.
 		var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];

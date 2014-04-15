@@ -5,6 +5,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	var Request = function(url, success, error) {
 		var request = this.request = new XMLHttpRequest();
 		request.open('GET', url, true);
+		request.setRequestHeader("Accept", "application/json");
 	
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
@@ -229,6 +230,10 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				// PMT returns a nested config object in the config response.
 				config = config.config;
 			}
+			if (config.error) {
+				this.onError(config.error);
+				return;
+			}
 			this.config = Config.process(config, this.options);
 			// the config property for the mediaGen can be specified.
 			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
@@ -274,6 +279,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Tue Apr 01 2014 15:09:22";
+	ConfigLoader.build = "Tue Apr 15 2014 11:09:43";
 	return ConfigLoader;
 })(_, VMAPParser, Url);

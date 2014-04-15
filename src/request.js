@@ -2,6 +2,7 @@
 var Request = function(url, success, error) {
 	var request = this.request = new XMLHttpRequest();
 	request.open('GET', url, true);
+	request.setRequestHeader("Accept", "application/json");
 
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
