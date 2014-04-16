@@ -26,7 +26,7 @@ asyncTest("config loader", 7, function() {
 	cl.load();
 });
 
-asyncTest("media gen property with local json", 7, function() {
+asyncTest("media gen property with local json", 8, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:uma:videolist:mtv.com:1712673",
 		mediaGenProperty: "brightcove_mediagenRootURL",
@@ -46,6 +46,7 @@ asyncTest("media gen property with local json", 7, function() {
 		ok(config.mediaGen.vmap, "config.mediaGen.vmap exists");
 		ok(config.mediaGen.vmap.adBreaks, "config.mediaGen.vmap.adBreaks exists");
 		ok(config.mediaGen.vmap.trackers, "config.mediaGen.vmap.trackers exists");
+		ok(config.mediaGen.overlay, "config.mediaGen.overlay");
 		console.log("test.js:49 config", config);
 		start();
 	});
@@ -57,7 +58,7 @@ asyncTest("media gen property with local json", 7, function() {
 	cl.load();
 });
 
-asyncTest("media gen property", 7, function() {
+asyncTest("media gen property", 8, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:uma:videolist:mtv.com:1712673",
 		mediaGenProperty: "brightcove_mediagenRootURL",
@@ -76,6 +77,7 @@ asyncTest("media gen property", 7, function() {
 		ok(config.mediaGen.vmap, "config.mediaGen.vmap exists");
 		ok(config.mediaGen.vmap.adBreaks, "config.mediaGen.vmap.adBreaks exists");
 		ok(config.mediaGen.vmap.trackers, "config.mediaGen.vmap.trackers exists");
+		ok(config.mediaGen.overlay, "config.mediaGen.overlay");
 		console.log("test.js:49 config", config);
 		start();
 	});

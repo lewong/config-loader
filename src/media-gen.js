@@ -19,6 +19,9 @@ var MediaGen = {
 			vmapItem = _.find(item, function(maybeVmap) {
 				return _.isObject(maybeVmap.vmap);
 			});
+			vmapItem.overlay = _.find(item, function(maybeOverlay) {
+				return maybeOverlay.placement === "overlay";
+			});
 		} else if (_.isObject(item) && item.vmap) {
 			vmapItem = item;
 		}

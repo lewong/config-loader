@@ -2096,6 +2096,9 @@ var ConfigLoader = (function() {
 				vmapItem = _.find(item, function(maybeVmap) {
 					return _.isObject(maybeVmap.vmap);
 				});
+				vmapItem.overlay = _.find(item, function(maybeOverlay) {
+					return maybeOverlay.placement === "overlay";
+				});
 			} else if (_.isObject(item) && item.vmap) {
 				vmapItem = item;
 			}
@@ -2353,6 +2356,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Wed Apr 16 2014 10:44:59";
+	ConfigLoader.build = "Wed Apr 16 2014 10:52:47";
 	return ConfigLoader;
 })();
