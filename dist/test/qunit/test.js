@@ -80,7 +80,7 @@ asyncTest("media gen property", 7, function() {
 		start();
 	});
 	cl.on(ConfigLoader.Events.ERROR, function(event) {
-		console.log("test.js:49 event", event.data);
+		console.error("unexpected", event.data);
 		ok(false, "error thrown");
 		start();
 	});
@@ -89,10 +89,9 @@ asyncTest("media gen property", 7, function() {
 
 asyncTest("json parse error", 1, function() {
 	var cl = new ConfigLoader({
-		configURL: "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=html&stage=d"
+		configURL: "data/invalid-format.json"
 	});
-	cl.on(ConfigLoader.Events.ERROR, function(event) {
-		console.log("test.js:49 event", event.data);
+	cl.on(ConfigLoader.Events.ERROR, function() {
 		ok(true, "error thrown");
 		start();
 	});
@@ -114,6 +113,21 @@ asyncTest("test error", 2, function() {
 });
 
 asyncTest("test error response parser error", 3, function() {
+	var cl = new ConfigLoader({
+		configURL: "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=html&stage=d"
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test mediaGen parser error:", event.data);
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR, "event type");
+		ok(event.target === cl, "event target match");
+		ok(event.data === "there was an error", "error message match");
+		start();
+	});
+	cl.load();
+});
+
+asyncTest("test error response parser error local", 3, function() {
 	var cl = new ConfigLoader({
 		configURL: "data/error.json"
 	});
