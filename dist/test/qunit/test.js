@@ -6,9 +6,10 @@ test("exported", function() {
 
 asyncTest("config loader", 7, function() {
 	var cl = new ConfigLoader({
-		uri: "mgid:cms:video:nickjr.com:119998",
+		uri: "mgid:uma:videolist:mtv.com:1713174",
+		mediaGenProperty: "brightcove_mediagenRootURL",
 		configParams: {
-			someConfigParam: "param1"
+			ref: "http://media.mtvnservices.com/player/api/xbox/MTV_App_XBoxone_v1"
 		}
 	});
 	cl.on(ConfigLoader.Events.READY, function(event) {
@@ -21,6 +22,12 @@ asyncTest("config loader", 7, function() {
 		ok(config.mediaGen.vmap, "config.mediaGen.vmap exists");
 		ok(config.mediaGen.vmap.adBreaks, "config.mediaGen.vmap.adBreaks exists");
 		ok(config.mediaGen.vmap.trackers, "config.mediaGen.vmap.trackers exists");
+		start();
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.error("config loader test", event.data);
+		expect(1);
+		ok(false, "error thrown");
 		start();
 	});
 	cl.load();
@@ -100,7 +107,7 @@ asyncTest("json parse error", 1, function() {
 	cl.load();
 });
 
-asyncTest("test error", 2, function() {
+asyncTest("test config error", 2, function() {
 	var cl = new ConfigLoader({
 		configURL: "http://google.com",
 		uri: "mgid:cms:video:nickjr.com:119998"
@@ -109,6 +116,26 @@ asyncTest("test error", 2, function() {
 		// equal totally causes the tests to hang :(
 		ok(event.type === ConfigLoader.Events.ERROR, "async test error, type");
 		ok(event.target === cl, "async test error, event target match");
+		start();
+	});
+	cl.load();
+});
+
+
+asyncTest("test mediaGen error", 1, function() {
+	var cl = new ConfigLoader({
+		uri: "mgid:uma:videolist:mtv.com:17243f75",
+		mediaGenProperty: "brightcove_mediagenRootURL",
+		configParams: {
+			ref: "http://media.mtvnservices.com/player/api/xbox/MTV_App_XBoxone_v1"
+		}
+	});
+	cl.on(ConfigLoader.Events.READY, function() {
+		ok(false, "ready event fired");
+		start();
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		ok(event.data === "Sorry, this video is not found or no longer available due to date or rights restrictions.", "error thrown");
 		start();
 	});
 	cl.load();

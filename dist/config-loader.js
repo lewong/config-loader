@@ -145,11 +145,20 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				vmapItem = _.find(item, function(maybeVmap) {
 					return _.isObject(maybeVmap.vmap);
 				});
-				vmapItem.overlay = _.find(item, function(maybeOverlay) {
-					return maybeOverlay.placement === "overlay";
-				});
+				if (vmapItem) {
+					vmapItem.overlay = _.find(item, function(maybeOverlay) {
+						return maybeOverlay.placement === "overlay";
+					});
+				}
 			} else if (_.isObject(item) && item.vmap) {
 				vmapItem = item;
+			}
+			if (!vmapItem) {
+				_.some(item, function(maybeError) {
+					if (maybeError.type === "text") {
+						throw maybeError.text;
+					}
+				});
 			}
 			// return only the vmap item.
 			// and process only the vmap.
@@ -209,7 +218,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				interpolate: /\{\{(.+?)\}\}/g
 			});
 		},
-		CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
+		CONFIG_URL = "http://media.mtvnservices.com/pmt/e1/access/index.html",
 		Events = ConfigLoader.Events = {
 			READY: "ready",
 			ERROR: "error"
@@ -282,6 +291,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Wed Apr 16 2014 10:52:47";
+	ConfigLoader.build = "Wed Apr 16 2014 22:23:33";
 	return ConfigLoader;
 })(_, VMAPParser, Url);

@@ -19,7 +19,7 @@ var ConfigLoader = function(options) {
 			interpolate: /\{\{(.+?)\}\}/g
 		});
 	},
-	CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
+	CONFIG_URL = "http://media.mtvnservices.com/pmt/e1/access/index.html",
 	Events = ConfigLoader.Events = {
 		READY: "ready",
 		ERROR: "error"
