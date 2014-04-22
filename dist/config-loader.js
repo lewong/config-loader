@@ -208,7 +208,8 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				returntype: "config",
 				configtype: "vmap",
 				uri: options.uri
-			})
+			}),
+			mediaGenParams: options.mediaGenParams || {}
 		});
 		this.initialize.apply(this, arguments);
 	},
@@ -252,7 +253,11 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			if (!mediaGen) {
 				this.onError("no media gen specified");
 			} else {
-				mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
+				var mediaGenParams = _.clone(this.options.mediaGenParams);
+				_.each(config.overrideParams, function(value, key) {
+					mediaGenParams["UMBEPARAM" + key] = value;
+				});
+				mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
 				this.request = new Request(
 					mediaGen,
 					this.onMediaGenLoaded,
@@ -291,6 +296,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Thu Apr 17 2014 16:08:27";
+	ConfigLoader.build = "Tue Apr 22 2014 11:50:44";
 	return ConfigLoader;
 })(_, VMAPParser, Url);

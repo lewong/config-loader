@@ -1,4 +1,4 @@
-/*globals test, asyncTest, ConfigLoader, start, ok*/
+/*globals test, asyncTest, ConfigLoader, start, ok, expect*/
 /* jshint devel:true */
 test("exported", function() {
 	ok(ConfigLoader, "Object Exported");

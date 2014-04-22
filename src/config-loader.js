@@ -9,7 +9,8 @@ var ConfigLoader = function(options) {
 			returntype: "config",
 			configtype: "vmap",
 			uri: options.uri
-		})
+		}),
+		mediaGenParams: options.mediaGenParams || {}
 	});
 	this.initialize.apply(this, arguments);
 },
@@ -53,7 +54,11 @@ ConfigLoader.prototype = {
 		if (!mediaGen) {
 			this.onError("no media gen specified");
 		} else {
-			mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
+			var mediaGenParams = _.clone(this.options.mediaGenParams);
+			_.each(config.overrideParams, function(value, key) {
+				mediaGenParams["UMBEPARAM" + key] = value;
+			});
+			mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
 			this.request = new Request(
 				mediaGen,
 				this.onMediaGenLoaded,
