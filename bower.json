@@ -11,12 +11,11 @@
 		"./dist/config-loader.min.js"
 	],
 	"ignore": [
-		"**/.*",
+		"Gruntfile.js",
 		"test",
 		"src",
-		"testem.json",
-		"build",
 		"node_modules",
+		"bower_components",
 		"components"
 	],
 	"dependencies": {
