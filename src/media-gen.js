@@ -1,6 +1,7 @@
 /* exported MediaGen */
 /* global _, VMAPParser */
 var MediaGen = {
+	MEDIA_GEN_ERROR: "mediaGenError",
 	getItem: function(p) {
 		if (p && p.item) {
 			return p.item;
@@ -30,7 +31,10 @@ var MediaGen = {
 		if (!vmapItem) {
 			_.some(item, function(maybeError) {
 				if (maybeError.type === "text") {
-					throw maybeError.text;
+					throw {
+						name: MediaGen.MEDIA_GEN_ERROR,
+						message: maybeError.text
+					};
 				}
 			});
 		}

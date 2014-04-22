@@ -127,6 +127,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	/* exported MediaGen */
 	/* global _, VMAPParser */
 	var MediaGen = {
+		MEDIA_GEN_ERROR: "mediaGenError",
 		getItem: function(p) {
 			if (p && p.item) {
 				return p.item;
@@ -156,7 +157,10 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			if (!vmapItem) {
 				_.some(item, function(maybeError) {
 					if (maybeError.type === "text") {
-						throw maybeError.text;
+						throw {
+							name: MediaGen.MEDIA_GEN_ERROR,
+							message: maybeError.text
+						};
 					}
 				});
 			}
@@ -211,8 +215,12 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			}),
 			mediaGenParams: options.mediaGenParams || {}
 		});
+		if (options.verboseErrorMessaging) {
+			this.getErrorMessage = _.identity;
+		}
 		this.initialize.apply(this, arguments);
 	},
+	
 		template = function(template, data) {
 			template = template.replace(/\{{1,}/g, "{{").replace(/\}{1,}/g, "}}");
 			return _.template(template, data, {
@@ -224,9 +232,10 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			READY: "ready",
 			ERROR: "error"
 		};
+	ConfigLoader.DEFAULT_ERROR_MESSAGE = "Sorry, this video is currently not available.";
 	ConfigLoader.prototype = {
 		initialize: function() {
-			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError");
+			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError");
 			EventEmitter.convert(this);
 		},
 		load: function() {
@@ -235,7 +244,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			this.request = new Request(
 				url,
 				this.onConfigLoaded,
-				this.onError
+				this.onLoadError
 			);
 		},
 		onConfigLoaded: function(config) {
@@ -244,14 +253,14 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				config = config.config;
 			}
 			if (config.error) {
-				this.onError(config.error);
+				this.onError(this.getErrorMessage(config.error));
 				return;
 			}
 			this.config = Config.process(config, this.options);
 			// the config property for the mediaGen can be specified.
 			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
 			if (!mediaGen) {
-				this.onError("no media gen specified");
+				this.onError(this.getErrorMessage("no media gen specified."));
 			} else {
 				var mediaGenParams = _.clone(this.options.mediaGenParams);
 				_.each(config.overrideParams, function(value, key) {
@@ -261,7 +270,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				this.request = new Request(
 					mediaGen,
 					this.onMediaGenLoaded,
-					this.onError
+					this.onLoadError
 				);
 			}
 		},
@@ -271,7 +280,11 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				mediaGen = MediaGen.process(mediaGen);
 			} catch (e) {
 				error = true;
-				this.onError(e);
+				if (e.name === MediaGen.MEDIA_GEN_ERROR) {
+					this.onError(e.message);
+				} else {
+					this.onError(this.getErrorMessage(e));
+				}
 			}
 			if (!error) {
 				this.config.mediaGen = mediaGen;
@@ -282,12 +295,18 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				});
 			}
 		},
+		onLoadError: function(data) {
+			this.onError(this.getErrorMessage(data));
+		},
 		onError: function(data) {
 			this.emit(Events.ERROR, {
 				type: Events.ERROR,
 				data: data,
 				target: this
 			});
+		},
+		getErrorMessage: function() {
+			return ConfigLoader.DEFAULT_ERROR_MESSAGE;
 		},
 		destroy: function() {
 			if (this.request) {
@@ -296,6 +315,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Tue Apr 22 2014 11:50:44";
+	ConfigLoader.build = "Tue Apr 22 2014 17:23:35";
 	return ConfigLoader;
 })(_, VMAPParser, Url);

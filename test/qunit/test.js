@@ -1,4 +1,4 @@
-/*globals test, asyncTest, ConfigLoader, start, ok, expect*/
+/*globals test, asyncTest, ConfigLoader, start, ok, expect, equal*/
 /* jshint devel:true */
 test("exported", function() {
 	ok(ConfigLoader, "Object Exported");
@@ -123,6 +123,26 @@ asyncTest("test config error", 2, function() {
 });
 
 
+asyncTest("test mediaGen error with verboseErrorMessaging", 1, function() {
+	var cl = new ConfigLoader({
+		uri: "mgid:uma:videolist:mtv.com:17243f75",
+		mediaGenProperty: "brightcove_mediagenRootURL",
+		verboseErrorMessaging: true,
+		configParams: {
+			ref: "http://media.mtvnservices.com/player/api/xbox/MTV_App_XBoxone_v1"
+		}
+	});
+	cl.on(ConfigLoader.Events.READY, function() {
+		ok(false, "ready event fired");
+		start();
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		equal(event.data, "Sorry, this video is not found or no longer available due to date or rights restrictions.", "test error message");
+		start();
+	});
+	cl.load();
+});
+
 asyncTest("test mediaGen error", 1, function() {
 	var cl = new ConfigLoader({
 		uri: "mgid:uma:videolist:mtv.com:17243f75",
@@ -136,7 +156,8 @@ asyncTest("test mediaGen error", 1, function() {
 		start();
 	});
 	cl.on(ConfigLoader.Events.ERROR, function(event) {
-		ok(event.data === "Sorry, this video is not found or no longer available due to date or rights restrictions.", "error thrown");
+		// verbose messages are always on for media gen error responses.
+		equal(event.data, "Sorry, this video is not found or no longer available due to date or rights restrictions.", "test error message");
 		start();
 	});
 	cl.load();
@@ -151,7 +172,23 @@ asyncTest("test error response parser error", 3, function() {
 		// equal totally causes the tests to hang :(
 		ok(event.type === ConfigLoader.Events.ERROR, "event type");
 		ok(event.target === cl, "event target match");
-		ok(event.data === "there was an error", "error message match");
+		ok(event.data === ConfigLoader.DEFAULT_ERROR_MESSAGE, "error message match");
+		start();
+	});
+	cl.load();
+});
+
+asyncTest("test error response parser error with verbose messaging", 3, function() {
+	var cl = new ConfigLoader({
+		configURL: "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html?returntype=config&configtype=html&stage=d",
+		verboseErrorMessaging: true
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test mediaGen parser error:", event.data);
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR, "event type");
+		ok(event.target === cl, "event target match");
+		equal(event.data, "there was an error", "error message match");
 		start();
 	});
 	cl.load();
@@ -166,7 +203,23 @@ asyncTest("test error response parser error local", 3, function() {
 		// equal totally causes the tests to hang :(
 		ok(event.type === ConfigLoader.Events.ERROR, "event type");
 		ok(event.target === cl, "event target match");
-		ok(event.data === "json formatted error", "error message match");
+		equal(event.data, ConfigLoader.DEFAULT_ERROR_MESSAGE, "error message match");
+		start();
+	});
+	cl.load();
+});
+
+asyncTest("test error response parser error local with verboseErrorMessaging", 3, function() {
+	var cl = new ConfigLoader({
+		configURL: "data/error.json",
+		verboseErrorMessaging: true
+	});
+	cl.on(ConfigLoader.Events.ERROR, function(event) {
+		console.log("test mediaGen parser error:", event.data);
+		// equal totally causes the tests to hang :(
+		ok(event.type === ConfigLoader.Events.ERROR, "event type");
+		ok(event.target === cl, "event target match");
+		equal(event.data, "json formatted error", "error message match");
 		start();
 	});
 	cl.load();
