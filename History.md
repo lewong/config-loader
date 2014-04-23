@@ -1,6 +1,7 @@
-0.5.0 (WIP) / 2014-04-22 
+0.5.0 / 2014-04-22 
 ==================
 
+ * `shouldLoadMediaGen` option, used by pjs-player. If false, the `READY` event will fire when the config is loaded.
  * Never use default error message for media gen error responses.
  * Use default error message unless `verboseErrorMessaging:true` is passed in constructor.
  * Use overrideParams in mediaGen request. 

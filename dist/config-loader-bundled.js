@@ -2393,6 +2393,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Wed Apr 23 2014 16:11:41";
+	ConfigLoader.build = "Wed Apr 23 2014 16:13:58";
 	return ConfigLoader;
 })();
