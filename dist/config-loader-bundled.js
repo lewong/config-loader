@@ -1354,10 +1354,12 @@ var ConfigLoader = (function() {
 		/* global _ */
 		var PREROLL = "preroll",
 			MIDROLL = "midroll",
-			POSTROLL = "postroll";
+			POSTROLL = "postroll",
+			OFFSET_START = "start",
+			OFFSET_END = "end";
 		
 		function truncate(num) {
-			return Math.round(num * 100) / 100;
+			return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
 		}
 		
 		/**
@@ -1481,9 +1483,9 @@ var ConfigLoader = (function() {
 		
 		
 		function getAdType(timeOffset) {
-			if (timeOffset === "start") {
+			if (timeOffset === OFFSET_START) {
 				return PREROLL;
-			} else if (timeOffset === "end") {
+			} else if (timeOffset === OFFSET_END) {
 				return POSTROLL;
 			}
 			return MIDROLL;
@@ -1540,8 +1542,7 @@ var ConfigLoader = (function() {
 				var trackers = [],
 					accumulatedAdTime = 0,
 					totalPostrollTime = 0,
-					totalDuration,
-					ranges = [];
+					totalDuration;
 		
 				// clean up the property names.
 				vmap = vmap["vmap:VMAP"];
@@ -1552,33 +1553,31 @@ var ConfigLoader = (function() {
 				function processAdPod(rolls, group, offset) {
 					// the start time for the group based on other previous group times.
 					var adPodOffset = accumulatedAdTime + parseFloat(offset, 10);
-					if (offset === "end") {
+					if (offset === OFFSET_END) {
 						// if we're going from the end
 						adPodOffset = totalDuration - totalPostrollTime;
 					}
-					// console.log("Ad Pod, Offset: " + (offset === "end" ? "End" : formatTime(offset)));
-					var adPodRange = [];
+					// console.log("Ad Pod, Offset: " + (offset === OFFSET_END ? "End" : formatTime(offset)));
+					var endTime;
 					_.each(group, function(ad) {
 						var AdSource = ad.AdSource;
 						_.each(AdSource, clean);
 						// console.log(ad.breakId);
 						// parse
 						var duration = getAdDuration(AdSource.VASTData.VAST.Ad),
-							adStartTime = _.isEmpty(adPodRange) ? adPodOffset : _.last(adPodRange) + 1,
-							endTime = adStartTime + duration;
+							startTime = _.isUndefined(endTime) ? adPodOffset : endTime;
+						endTime = startTime + duration;
 						accumulatedAdTime += duration;
-						// console.log("From " + formatTime(adStartTime) + " to " + formatTime(endTime), "seconds: " + truncate(adStartTime) + "-" + truncate(endTime));
-						// the range 
-						adPodRange = adPodRange.concat(_.range(Math.ceil(adStartTime), Math.floor(endTime)));
+						// console.log("From " + formatTime(startTime) + " to " + formatTime(endTime), "seconds: " + truncate(startTime) + "-" + truncate(endTime));
 						// trackers
-						createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), adStartTime, trackers);
+						createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), startTime, trackers);
 						var result = {
 							type: getAdType(ad.timeOffset),
 							breakId: AdSource.id,
-							startTime: adStartTime,
-							endTime: endTime,
+							startTime: truncate(startTime),
+							endTime: truncate(endTime),
 							timeOffset: ad.timeOffset,
-							duration: duration
+							duration: truncate(duration)
 						};
 						var clickThrough = getClickThrough(AdSource);
 						if (clickThrough) {
@@ -1586,7 +1585,6 @@ var ConfigLoader = (function() {
 						}
 						rolls.push(result);
 					});
-					ranges.push(_.flatten(adPodRange));
 					return rolls;
 				}
 		
@@ -1595,29 +1593,29 @@ var ConfigLoader = (function() {
 				// parse all the ad breaks.
 				// console.log("vmap.js:240 vmap.AdBreak", vmap.AdBreak);
 				var rolls = _.reduce(_.groupBy(vmap.AdBreak, function(adBreak) {
-					if (adBreak.timeOffset === "start") {
+					if (adBreak.timeOffset === OFFSET_START) {
 						return 0;
 					}
-					if (adBreak.timeOffset === "end") {
+					if (adBreak.timeOffset === OFFSET_END) {
 						totalPostrollTime += getAdDuration(adBreak);
-						return "end";
+						return OFFSET_END;
 					}
 					return rawTime(adBreak.timeOffset);
 				}), processAdPod, []);
 				// console.log("rolls", rolls);
 				return {
 					uri: vmap.Extensions.unicornOnce.contenturi,
-					// ranges: ranges, TODO include ranges?
-					contentDuration: parseFloat(vmap.Extensions.unicornOnce.contentlength, 10),
-					totalDuration: totalDuration,
+					timedTextURL: vmap.Extensions.timedTextURL["#cdata-section"],
+					contentDuration: truncate(parseFloat(vmap.Extensions.unicornOnce.contentlength, 10)),
+					totalDuration: truncate(totalDuration),
 					trackers: trackers,
 					adBreaks: rolls
 				};
 			},
 			rawTime: rawTime,
 			formatTime: formatTime,
-			version: "Mon Mar 03 2014 16:35:43",
-			build: "0.1.0"
+			version: "Thu Apr 17 2014 16:03:02",
+			build: "0.3.0"
 		};
 		return VMAPParser;
 	})(_);
@@ -2078,6 +2076,7 @@ var ConfigLoader = (function() {
 	/* exported MediaGen */
 	/* global _, VMAPParser */
 	var MediaGen = {
+		MEDIA_GEN_ERROR: "mediaGenError",
 		getItem: function(p) {
 			if (p && p.item) {
 				return p.item;
@@ -2096,8 +2095,23 @@ var ConfigLoader = (function() {
 				vmapItem = _.find(item, function(maybeVmap) {
 					return _.isObject(maybeVmap.vmap);
 				});
+				if (vmapItem) {
+					vmapItem.overlay = _.find(item, function(maybeOverlay) {
+						return maybeOverlay.placement === "overlay";
+					});
+				}
 			} else if (_.isObject(item) && item.vmap) {
 				vmapItem = item;
+			}
+			if (!vmapItem) {
+				_.some(item, function(maybeError) {
+					if (maybeError.type === "text") {
+						throw {
+							name: MediaGen.MEDIA_GEN_ERROR,
+							message: maybeError.text
+						};
+					}
+				});
 			}
 			// return only the vmap item.
 			// and process only the vmap.
@@ -2193,6 +2207,7 @@ var ConfigLoader = (function() {
 	var Request = function(url, success, error) {
 		var request = this.request = new XMLHttpRequest();
 		request.open('GET', url, true);
+		request.setRequestHeader("Accept", "application/json");
 	
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
@@ -2263,14 +2278,17 @@ var ConfigLoader = (function() {
 	var ConfigLoader = function(options) {
 		this.options = options || {};
 		_.defaults(options, {
-			feed: true,
-			mediaGen: false,
+			shouldLoadMediaGen: true,
 			configParams: _.defaults(options.configParams || {}, {
 				returntype: "config",
 				configtype: "vmap",
 				uri: options.uri
-			})
+			}),
+			mediaGenParams: options.mediaGenParams || {}
 		});
+		if (options.verboseErrorMessaging) {
+			this.getErrorMessage = _.identity;
+		}
 		this.initialize.apply(this, arguments);
 	},
 		template = function(template, data) {
@@ -2279,23 +2297,25 @@ var ConfigLoader = (function() {
 				interpolate: /\{\{(.+?)\}\}/g
 			});
 		},
-		CONFIG_URL = "http://media.mtvnservices-q.mtvi.com/pmt/e1/access/index.html",
+		CONFIG_URL = "http://media.mtvnservices.com/pmt/e1/access/index.html",
 		Events = ConfigLoader.Events = {
 			READY: "ready",
 			ERROR: "error"
 		};
+	ConfigLoader.DEFAULT_ERROR_MESSAGE = "Sorry, this video is currently not available.";
 	ConfigLoader.prototype = {
 		initialize: function() {
-			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError");
+			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError");
 			EventEmitter.convert(this);
 		},
+		shouldLoadMediaGen: true,
 		load: function() {
 			var url = template(this.options.configURL || CONFIG_URL, this.options, {});
 			url = Url.setParameters(url, this.options.configParams);
 			this.request = new Request(
 				url,
 				this.onConfigLoaded,
-				this.onError
+				this.onLoadError
 			);
 		},
 		onConfigLoaded: function(config) {
@@ -2303,18 +2323,30 @@ var ConfigLoader = (function() {
 				// PMT returns a nested config object in the config response.
 				config = config.config;
 			}
+			if (config.error) {
+				this.onError(this.getErrorMessage(config.error));
+				return;
+			}
 			this.config = Config.process(config, this.options);
-			// the config property for the mediaGen can be specified.
-			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
-			if (!mediaGen) {
-				this.onError("no media gen specified");
+			if (this.options.shouldLoadMediaGen) {
+				// the config property for the mediaGen can be specified.
+				var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+				if (!mediaGen) {
+					this.onError(this.getErrorMessage("no media gen specified."));
+				} else {
+					var mediaGenParams = _.clone(this.options.mediaGenParams);
+					_.each(config.overrideParams, function(value, key) {
+						mediaGenParams["UMBEPARAM" + key] = value;
+					});
+					mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
+					this.request = new Request(
+						mediaGen,
+						this.onMediaGenLoaded,
+						this.onLoadError
+					);
+				}
 			} else {
-				mediaGen = Url.setParameters(template(mediaGen, config), this.options.mediaGenParams);
-				this.request = new Request(
-					mediaGen,
-					this.onMediaGenLoaded,
-					this.onError
-				);
+				this.sendReady();
 			}
 		},
 		onMediaGenLoaded: function(mediaGen) {
@@ -2323,16 +2355,26 @@ var ConfigLoader = (function() {
 				mediaGen = MediaGen.process(mediaGen);
 			} catch (e) {
 				error = true;
-				this.onError(e);
+				if (e.name === MediaGen.MEDIA_GEN_ERROR) {
+					this.onError(e.message);
+				} else {
+					this.onError(this.getErrorMessage(e));
+				}
 			}
 			if (!error) {
 				this.config.mediaGen = mediaGen;
-				this.emit(Events.READY, {
-					type: Events.READY,
-					data: this.config,
-					target: this
-				});
+				this.sendReady();
 			}
+		},
+		sendReady: function() {
+			this.emit(Events.READY, {
+				type: Events.READY,
+				data: this.config,
+				target: this
+			});
+		},
+		onLoadError: function(data) {
+			this.onError(this.getErrorMessage(data));
 		},
 		onError: function(data) {
 			this.emit(Events.ERROR, {
@@ -2341,13 +2383,16 @@ var ConfigLoader = (function() {
 				target: this
 			});
 		},
+		getErrorMessage: function() {
+			return ConfigLoader.DEFAULT_ERROR_MESSAGE;
+		},
 		destroy: function() {
 			if (this.request) {
 				this.request.abort();
 			}
 		}
 	};
-	ConfigLoader.version = "0.4.0";
-	ConfigLoader.build = "Tue Apr 01 2014 15:01:24";
+	ConfigLoader.version = "0.5.0";
+	ConfigLoader.build = "Wed Apr 23 2014 16:13:58";
 	return ConfigLoader;
 })();

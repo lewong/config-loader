@@ -3,17 +3,27 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
-			folder: ["dist/*"]
+			folder: ["dist/*, .build/"]
 		},
 		meta: {
 			version: '<%= pkg.version %><%= grunt.config("buildNumber") %>',
 			build: '<%= grunt.template.today("mm/dd/yyyy hh:MM:ss TT") %>;'
 		},
+		rig: {
+			all: {
+				expand: true,
+				cwd: "src/build/",
+				src: '*.js',
+				dest: 'dist/'
+			}
+		},
 		uglify: {
 			all: {
-				files: {
-					"dist/<%= pkg.name %>.min.js": "dist/<%= pkg.name %>.js"
-				}
+				expand: true,
+				cwd: "dist/",
+				src: '*.js',
+				ext: ".min.js",
+				dest: 'dist/'
 			}
 		},
 		jshint: {
@@ -24,16 +34,6 @@ module.exports = function(grunt) {
 			release: {
 				options: grunt.file.readJSON("./components/project-settings/jshint.json"),
 				src: ['src/**/*.js']
-			}
-		},
-		rig: {
-			devel: {
-				src: ['src/build/<%= pkg.name %>.js'],
-				dest: 'dist/<%= pkg.name %>.js'
-			},
-			bundled: {
-				src: ['src/build/<%= pkg.name %>-bundled.js'],
-				dest: 'dist/<%= pkg.name %>-bundled.js'
 			}
 		},
 		bump: {
@@ -59,23 +59,20 @@ module.exports = function(grunt) {
 			}
 		},
 		replace: {
-			dist: {
-				options: {
-					patterns: [{
-						match: 'timestamp',
-						replacement: '<%= grunt.template.today() %>'
-					}, {
-						match: 'version',
-						replacement: '<%= pkg.version %><%= grunt.config("buildNumber") %>'
-					}]
-				},
-				files: [{
-					src: "dist/<%= pkg.name %>.js",
-					dest: "dist/<%= pkg.name %>.js"
+			options: {
+				patterns: [{
+					match: 'timestamp',
+					replacement: '<%= grunt.template.today() %>'
 				}, {
-					src: "dist/<%= pkg.name %>-bundled.js",
-					dest: "dist/<%= pkg.name %>-bundled.js"
+					match: 'version',
+					replacement: '<%= pkg.version %><%= grunt.config("buildNumber") %>'
 				}]
+			},
+			dist: {
+				expand: true,
+				cwd: "dist/",
+				src: '*.js',
+				dest: 'dist/'
 			}
 		},
 		push_svn: {

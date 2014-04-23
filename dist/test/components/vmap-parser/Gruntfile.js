@@ -66,6 +66,9 @@ module.exports = function(grunt) {
 			}
 		},
 		mochaTest: {
+			options: {
+				growl: true
+			},
 			test: {
 				src: "test/test.js",
 			}

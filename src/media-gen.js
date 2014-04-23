@@ -1,6 +1,7 @@
 /* exported MediaGen */
 /* global _, VMAPParser */
 var MediaGen = {
+	MEDIA_GEN_ERROR: "mediaGenError",
 	getItem: function(p) {
 		if (p && p.item) {
 			return p.item;
@@ -19,8 +20,23 @@ var MediaGen = {
 			vmapItem = _.find(item, function(maybeVmap) {
 				return _.isObject(maybeVmap.vmap);
 			});
+			if (vmapItem) {
+				vmapItem.overlay = _.find(item, function(maybeOverlay) {
+					return maybeOverlay.placement === "overlay";
+				});
+			}
 		} else if (_.isObject(item) && item.vmap) {
 			vmapItem = item;
+		}
+		if (!vmapItem) {
+			_.some(item, function(maybeError) {
+				if (maybeError.type === "text") {
+					throw {
+						name: MediaGen.MEDIA_GEN_ERROR,
+						message: maybeError.text
+					};
+				}
+			});
 		}
 		// return only the vmap item.
 		// and process only the vmap.

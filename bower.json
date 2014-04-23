@@ -1,27 +1,30 @@
 {
-	"name": "config-loader",
-	"version": "0.4.0",
+	"name": "pjs-config-loader",
+	"version": "0.5.0",
+	"homepage": "https://github.com/p-js/config-loader",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/p-js/config-loader.git"
+	},
 	"main": [
 		"./dist/config-loader.js",
 		"./dist/config-loader.min.js"
 	],
 	"ignore": [
-		"**/.*",
+		"Gruntfile.js",
 		"test",
 		"src",
-		"testem.json",
-		"build",
 		"node_modules",
+		"bower_components",
 		"components"
 	],
 	"dependencies": {
-		"underscore": "*",
+		"underscore": "^1.6.0",
 		"vmap-parser": "p-js/vmap-parser",
-		"url-util": "p-js/url-util",
-		"jquery": "1.10.2"
+		"url-util": "p-js/url-util"
 	},
 	"devDependencies": {
 		"project-settings": "p-js/project-settings",
-		"qunit": "~1.14.0"
+		"qunit": "^1.14.0"
 	}
 }

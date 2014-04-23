@@ -12,10 +12,12 @@
 	/* global _ */
 	var PREROLL = "preroll",
 		MIDROLL = "midroll",
-		POSTROLL = "postroll";
+		POSTROLL = "postroll",
+		OFFSET_START = "start",
+		OFFSET_END = "end";
 	
 	function truncate(num) {
-		return Math.round(num * 100) / 100;
+		return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
 	}
 	
 	/**
@@ -139,9 +141,9 @@
 	
 	
 	function getAdType(timeOffset) {
-		if (timeOffset === "start") {
+		if (timeOffset === OFFSET_START) {
 			return PREROLL;
-		} else if (timeOffset === "end") {
+		} else if (timeOffset === OFFSET_END) {
 			return POSTROLL;
 		}
 		return MIDROLL;
@@ -198,8 +200,7 @@
 			var trackers = [],
 				accumulatedAdTime = 0,
 				totalPostrollTime = 0,
-				totalDuration,
-				ranges = [];
+				totalDuration;
 	
 			// clean up the property names.
 			vmap = vmap["vmap:VMAP"];
@@ -210,33 +211,31 @@
 			function processAdPod(rolls, group, offset) {
 				// the start time for the group based on other previous group times.
 				var adPodOffset = accumulatedAdTime + parseFloat(offset, 10);
-				if (offset === "end") {
+				if (offset === OFFSET_END) {
 					// if we're going from the end
 					adPodOffset = totalDuration - totalPostrollTime;
 				}
-				// console.log("Ad Pod, Offset: " + (offset === "end" ? "End" : formatTime(offset)));
-				var adPodRange = [];
+				// console.log("Ad Pod, Offset: " + (offset === OFFSET_END ? "End" : formatTime(offset)));
+				var endTime;
 				_.each(group, function(ad) {
 					var AdSource = ad.AdSource;
 					_.each(AdSource, clean);
 					// console.log(ad.breakId);
 					// parse
 					var duration = getAdDuration(AdSource.VASTData.VAST.Ad),
-						adStartTime = _.isEmpty(adPodRange) ? adPodOffset : _.last(adPodRange) + 1,
-						endTime = adStartTime + duration;
+						startTime = _.isUndefined(endTime) ? adPodOffset : endTime;
+					endTime = startTime + duration;
 					accumulatedAdTime += duration;
-					// console.log("From " + formatTime(adStartTime) + " to " + formatTime(endTime), "seconds: " + truncate(adStartTime) + "-" + truncate(endTime));
-					// the range 
-					adPodRange = adPodRange.concat(_.range(Math.ceil(adStartTime), Math.floor(endTime)));
+					// console.log("From " + formatTime(startTime) + " to " + formatTime(endTime), "seconds: " + truncate(startTime) + "-" + truncate(endTime));
 					// trackers
-					createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), adStartTime, trackers);
+					createTrackers(AdSource.id, duration, _.flatten(find(AdSource, "Tracking")), startTime, trackers);
 					var result = {
 						type: getAdType(ad.timeOffset),
 						breakId: AdSource.id,
-						startTime: adStartTime,
-						endTime: endTime,
+						startTime: truncate(startTime),
+						endTime: truncate(endTime),
 						timeOffset: ad.timeOffset,
-						duration: duration
+						duration: truncate(duration)
 					};
 					var clickThrough = getClickThrough(AdSource);
 					if (clickThrough) {
@@ -244,7 +243,6 @@
 					}
 					rolls.push(result);
 				});
-				ranges.push(_.flatten(adPodRange));
 				return rolls;
 			}
 	
@@ -253,29 +251,29 @@
 			// parse all the ad breaks.
 			// console.log("vmap.js:240 vmap.AdBreak", vmap.AdBreak);
 			var rolls = _.reduce(_.groupBy(vmap.AdBreak, function(adBreak) {
-				if (adBreak.timeOffset === "start") {
+				if (adBreak.timeOffset === OFFSET_START) {
 					return 0;
 				}
-				if (adBreak.timeOffset === "end") {
+				if (adBreak.timeOffset === OFFSET_END) {
 					totalPostrollTime += getAdDuration(adBreak);
-					return "end";
+					return OFFSET_END;
 				}
 				return rawTime(adBreak.timeOffset);
 			}), processAdPod, []);
 			// console.log("rolls", rolls);
 			return {
 				uri: vmap.Extensions.unicornOnce.contenturi,
-				// ranges: ranges, TODO include ranges?
-				contentDuration: parseFloat(vmap.Extensions.unicornOnce.contentlength, 10),
-				totalDuration: totalDuration,
+				timedTextURL: vmap.Extensions.timedTextURL["#cdata-section"],
+				contentDuration: truncate(parseFloat(vmap.Extensions.unicornOnce.contentlength, 10)),
+				totalDuration: truncate(totalDuration),
 				trackers: trackers,
 				adBreaks: rolls
 			};
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "Mon Mar 03 2014 16:35:43",
-		build: "0.1.0"
+		version: "Thu Apr 17 2014 16:03:02",
+		build: "0.3.0"
 	};
 	return VMAPParser;
 }));
