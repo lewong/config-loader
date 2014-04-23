@@ -2387,6 +2387,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Tue Apr 22 2014 18:42:38";
+	ConfigLoader.build = "Tue Apr 22 2014 21:40:26";
 	return ConfigLoader;
 })();

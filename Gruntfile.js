@@ -3,14 +3,14 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
-			folder: ["dist/*"]
+			folder: ["dist/*, .build/"]
 		},
 		meta: {
 			version: '<%= pkg.version %><%= grunt.config("buildNumber") %>',
 			build: '<%= grunt.template.today("mm/dd/yyyy hh:MM:ss TT") %>;'
 		},
 		rig: {
-			devel: {
+			all: {
 				expand: true,
 				cwd: "src/build/",
 				src: '*.js',
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 			}
 		},
 		uglify: {
-			devel: {
+			all: {
 				expand: true,
 				cwd: "dist/",
 				src: '*.js',

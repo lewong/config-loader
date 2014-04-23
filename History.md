@@ -2,7 +2,7 @@
 ==================
 
  * Never use default error message for media gen error responses.
- * Use default error message unless `verboseErrorMessaging:true` passed in constructor.
+ * Use default error message unless `verboseErrorMessaging:true` is passed in constructor.
  * Use overrideParams in mediaGen request. 
  * Add test for timedTextURL.
  * Use live PMT url. 
