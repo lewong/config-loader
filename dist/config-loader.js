@@ -206,8 +206,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	var ConfigLoader = function(options) {
 		this.options = options || {};
 		_.defaults(options, {
-			feed: true,
-			mediaGen: false,
+			shouldLoadMediaGen: true,
 			configParams: _.defaults(options.configParams || {}, {
 				returntype: "config",
 				configtype: "vmap",
@@ -220,7 +219,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 		this.initialize.apply(this, arguments);
 	},
-	
 		template = function(template, data) {
 			template = template.replace(/\{{1,}/g, "{{").replace(/\}{1,}/g, "}}");
 			return _.template(template, data, {
@@ -238,6 +236,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError");
 			EventEmitter.convert(this);
 		},
+		shouldLoadMediaGen: true,
 		load: function() {
 			var url = template(this.options.configURL || CONFIG_URL, this.options, {});
 			url = Url.setParameters(url, this.options.configParams);
@@ -257,21 +256,25 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				return;
 			}
 			this.config = Config.process(config, this.options);
-			// the config property for the mediaGen can be specified.
-			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
-			if (!mediaGen) {
-				this.onError(this.getErrorMessage("no media gen specified."));
+			if (this.options.shouldLoadMediaGen) {
+				// the config property for the mediaGen can be specified.
+				var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+				if (!mediaGen) {
+					this.onError(this.getErrorMessage("no media gen specified."));
+				} else {
+					var mediaGenParams = _.clone(this.options.mediaGenParams);
+					_.each(config.overrideParams, function(value, key) {
+						mediaGenParams["UMBEPARAM" + key] = value;
+					});
+					mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
+					this.request = new Request(
+						mediaGen,
+						this.onMediaGenLoaded,
+						this.onLoadError
+					);
+				}
 			} else {
-				var mediaGenParams = _.clone(this.options.mediaGenParams);
-				_.each(config.overrideParams, function(value, key) {
-					mediaGenParams["UMBEPARAM" + key] = value;
-				});
-				mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
-				this.request = new Request(
-					mediaGen,
-					this.onMediaGenLoaded,
-					this.onLoadError
-				);
+				this.sendReady();
 			}
 		},
 		onMediaGenLoaded: function(mediaGen) {
@@ -288,12 +291,15 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			}
 			if (!error) {
 				this.config.mediaGen = mediaGen;
-				this.emit(Events.READY, {
-					type: Events.READY,
-					data: this.config,
-					target: this
-				});
+				this.sendReady();
 			}
+		},
+		sendReady: function() {
+			this.emit(Events.READY, {
+				type: Events.READY,
+				data: this.config,
+				target: this
+			});
 		},
 		onLoadError: function(data) {
 			this.onError(this.getErrorMessage(data));
@@ -315,6 +321,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Tue Apr 22 2014 21:40:26";
+	ConfigLoader.build = "Wed Apr 23 2014 16:11:41";
 	return ConfigLoader;
 })(_, VMAPParser, Url);
