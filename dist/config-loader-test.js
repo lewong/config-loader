@@ -23,12 +23,12 @@ var Request = function(url, success, error) {
 			}
 		} else {
 			// We reached our target server, but it returned an error
-			error(request.status);
+			error("Load Error, http status:" + request.status + " for " + url);
 		}
 	};
 
 	request.onerror = function() {
-		error(request.status);
+		error("Load Error, http status:" + request.status + " for " + url);
 	};
 
 	request.send();
@@ -414,4 +414,4 @@ ConfigLoader.prototype = {
 	}
 };
 ConfigLoader.version = "0.6.0";
-ConfigLoader.build = "Thu May 01 2014 18:49:01";
+ConfigLoader.build = "Thu May 08 2014 18:21:18";

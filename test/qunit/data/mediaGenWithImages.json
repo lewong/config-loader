@@ -6,17 +6,7 @@
 				"origination_date": "05-01-2014 18:20:01",
 				"live": "false",
 				"dvr": "false",
-				"vmap":
-
-
-
-
-
-
-
-
-
-				{
+				"vmap": {
 					"vmap:VMAP": {
 						"@version": "1.0",
 						"@xmlns:uo": "uo",
@@ -2682,10 +2672,7 @@
 							}
 						}]
 					}
-				}
-
-
-				,
+				},
 				"image": [{
 					"contentUri": "mgid:uma:video:mtv.com:1012992",
 					"contentDurationMs": "85760",

@@ -21,12 +21,12 @@ var Request = function(url, success, error) {
 			}
 		} else {
 			// We reached our target server, but it returned an error
-			error(request.status);
+			error("Load Error, http status:" + request.status + " for " + url);
 		}
 	};
 
 	request.onerror = function() {
-		error(request.status);
+		error("Load Error, http status:" + request.status + " for " + url);
 	};
 
 	request.send();

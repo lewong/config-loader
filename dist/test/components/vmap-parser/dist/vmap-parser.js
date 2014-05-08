@@ -241,8 +241,11 @@ var VMAPParser = (function(_) {
 	
 			// the whole thing, content and ads.
 			totalDuration = parseFloat(vmap.Extensions.unicornOnce.payloadlength, 10);
+			// if there's only one ad break, convert it to an Array.
+			if (!_.isArray(vmap.AdBreak) && _.isObject(vmap.AdBreak)) {
+				vmap.AdBreak = [vmap.AdBreak];
+			}
 			// parse all the ad breaks.
-			// console.log("vmap.js:240 vmap.AdBreak", vmap.AdBreak);
 			var rolls = _.reduce(_.groupBy(vmap.AdBreak, function(adBreak) {
 				if (adBreak.timeOffset === OFFSET_START) {
 					return 0;
@@ -265,8 +268,8 @@ var VMAPParser = (function(_) {
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "Thu Apr 17 2014 16:03:02",
-		build: "0.3.0"
+		version: "Thu May 08 2014 17:22:13",
+		build: "0.3.1"
 	};
 	return VMAPParser;
 })(_);
