@@ -46,15 +46,13 @@ ConfigLoader.prototype = {
 		);
 	},
 	getImage: function(time) {
-		if (!this.images) {
-			if (this.config) {
-				var mediaGen = this.config.mediaGen;
-				if (mediaGen) {
-					this.images = new Images(mediaGen.vmap.adBreaks, mediaGen.image);
-				}
+		if (this.config) {
+			var mediaGen = this.config.mediaGen;
+			if (mediaGen) {
+				return Images.getImage(mediaGen.image, time);
 			}
 		}
-		return this.images ? this.images.getImage(time) : undefined;
+		return undefined;
 	},
 	getMediaGenUrl: function() {
 		var mediaGen = this.options.mediaGenURL || this.config[this.options.mediaGenProperty || "mediaGen"];

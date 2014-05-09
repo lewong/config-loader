@@ -1,5 +1,5 @@
 /* exported MediaGen */
-/* global _, VMAPParser */
+/* global _, VMAPParser, Segments */
 var MediaGen = {
 	MEDIA_GEN_ERROR: "mediaGenError",
 	getItem: function(p) {
@@ -44,7 +44,11 @@ var MediaGen = {
 		if (result.vmap) {
 			// process the vmap if it's there.
 			result.vmap = VMAPParser.process(result.vmap);
+			if (result.image) {
+				Segments.process(result.vmap.adBreaks, result.image);
+			}
 		}
+
 		// return only the video item, not any others.
 		return result;
 	}

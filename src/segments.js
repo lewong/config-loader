@@ -1,7 +1,7 @@
 /* global _ */
 /* exported Segments */
 var Segments = {
-	get: function(adBreaks, segments) {
+	process: function(adBreaks, segments) {
 		return Segments.adjustForAds(adBreaks, Segments.configureSegments(segments));
 	},
 	configureSegments: function(segments) {
@@ -11,7 +11,7 @@ var Segments = {
 			};
 		return _.map(segments, function(segment) {
 			// make sure these are numbers. numbers are string in media gen world.
-			_.each(["contentDurationMs", "keyframeIntervalSeconds"], function(prop) {
+			_.each(["contentDurationMs", "keyframeIntervalSeconds", "width", "height"], function(prop) {
 				segment[prop] = parseFloat(segment[prop], 10);
 			});
 			// why ms? convert to seconds.

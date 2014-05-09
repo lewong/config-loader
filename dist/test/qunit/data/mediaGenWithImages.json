@@ -2675,7 +2675,7 @@
 				},
 				"image": [{
 					"contentUri": "mgid:uma:video:mtv.com:1012992",
-					"contentDurationMs": "85760",
+					"contentDurationMs": "85000",
 					"width": "300",
 					"height": "168",
 					"type": "image/jpeg",

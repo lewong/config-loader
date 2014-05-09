@@ -125,7 +125,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	/* exported MediaGen */
-	/* global _, VMAPParser */
+	/* global _, VMAPParser, Segments */
 	var MediaGen = {
 		MEDIA_GEN_ERROR: "mediaGenError",
 		getItem: function(p) {
@@ -170,7 +170,11 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			if (result.vmap) {
 				// process the vmap if it's there.
 				result.vmap = VMAPParser.process(result.vmap);
+				if (result.image) {
+					Segments.process(result.vmap.adBreaks, result.image);
+				}
 			}
+	
 			// return only the video item, not any others.
 			return result;
 		}
@@ -178,7 +182,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 	/* global _ */
 	/* exported Segments */
 	var Segments = {
-		get: function(adBreaks, segments) {
+		process: function(adBreaks, segments) {
 			return Segments.adjustForAds(adBreaks, Segments.configureSegments(segments));
 		},
 		configureSegments: function(segments) {
@@ -188,7 +192,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 				};
 			return _.map(segments, function(segment) {
 				// make sure these are numbers. numbers are string in media gen world.
-				_.each(["contentDurationMs", "keyframeIntervalSeconds"], function(prop) {
+				_.each(["contentDurationMs", "keyframeIntervalSeconds", "width", "height"], function(prop) {
 					segment[prop] = parseFloat(segment[prop], 10);
 				});
 				// why ms? convert to seconds.
@@ -215,21 +219,25 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			return segments;
 		}
 	};
-	/* global _, Segments */
+	/* global _ */
 	/* exported Images */
-	var Images = function(adBreaks, segments) {
-		this.segments = Segments.get(adBreaks, segments);
-	};
-	Images.prototype = {
-		getImage: function(time) {
+	var Images = {
+		getTimeString: function(chars) {
+			var s = "";
+			_.times(4 - chars, function() {
+				s += "0";
+			});
+			return s;
+		},
+		getImage: function(segments, time) {
 			time = Math.floor(time);
-			var foundSegment = _.find(this.segments, function(segment) {
+			var foundSegment = _.find(segments, function(segment) {
 				return time >= segment.startTime && time < segment.endTime;
 			});
 			if (foundSegment) {
 				foundSegment = _.clone(foundSegment);
 				var imageNumber = Math.floor((time - foundSegment.startTime) / foundSegment.keyframeIntervalSeconds),
-					padding = new Array(5 - imageNumber.toString().length).join("0");
+					padding = Images.getTimeString(imageNumber.toString().length);
 				foundSegment.src = foundSegment.src.replace("{0:0000}", padding + imageNumber);
 			}
 			return foundSegment;
@@ -320,15 +328,13 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			);
 		},
 		getImage: function(time) {
-			if (!this.images) {
-				if (this.config) {
-					var mediaGen = this.config.mediaGen;
-					if (mediaGen) {
-						this.images = new Images(mediaGen.vmap.adBreaks, mediaGen.image);
-					}
+			if (this.config) {
+				var mediaGen = this.config.mediaGen;
+				if (mediaGen) {
+					return Images.getImage(mediaGen.image, time);
 				}
 			}
-			return this.images ? this.images.getImage(time) : undefined;
+			return undefined;
 		},
 		getMediaGenUrl: function() {
 			var mediaGen = this.options.mediaGenURL || this.config[this.options.mediaGenProperty || "mediaGen"];
@@ -415,6 +421,6 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 		}
 	};
 	ConfigLoader.version = "0.6.0";
-	ConfigLoader.build = "Thu May 08 2014 18:21:18";
+	ConfigLoader.build = "Fri May 09 2014 13:25:41";
 	return ConfigLoader;
 })(_, VMAPParser, Url);
