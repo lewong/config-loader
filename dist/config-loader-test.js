@@ -419,5 +419,5 @@ ConfigLoader.prototype = {
 		}
 	}
 };
-ConfigLoader.version = "0.6.0";
-ConfigLoader.build = "Fri May 09 2014 13:27:57";
+ConfigLoader.version = "0.7.0";
+ConfigLoader.build = "Fri May 09 2014 14:43:16";
