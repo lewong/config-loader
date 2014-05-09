@@ -1,0 +1,2908 @@
+{
+	"package": {
+		"version": "1.7.4",
+		"video": {
+			"item": [{
+				"origination_date": "05-01-2014 18:20:01",
+				"live": "false",
+				"dvr": "false",
+				"vmap": {
+					"vmap:VMAP": {
+						"@version": "1.0",
+						"@xmlns:uo": "uo",
+						"@xmlns:vmap": "http://www.iab.net/vmap-1.0",
+						"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+						"vmap:Extensions": {
+							"uo:unicornOnce": {
+								"@ttl": "600",
+								"@contenturi": "http://api20-phx.unicornmedia.com/now/adaptive/m3u8/31e0061b-9a2a-4287-9acf-0a2917574471/98ae8fea-5604-4feb-af9d-ccd31cc78e0a/51973caf-51ff-4066-85c2-9b7861b1ce72/content.m3u8?oasid=0f6320b8-38b7-4fd8-84f1-9251b35d8642&umbeparamplaylist_link=http://www.mtv.com/shows/are_you_the_one/are-you-the-one-ep-9-white-party/1724375/playlist/&umbeparamplaylist_type=Full Episodes&umbeparamvideo_link=http://www.mtv.com/shows/are_you_the_one/are-you-the-one-ep-9-white-party/1724375/playlist/#vid=1012992&umbeparamfranchise=Are You The One?&umbeparamplaylist_title=Are You The One? | Ep. 9 | White Party&umbeparamplaylist_description=The cast lets loose at a White Party, Shanley gets serious about her feelings for Chris T., and the love triangle between Jacy, John, and Chris S. finally blows up.&umbeparammedia_player=http://media.mtvnservices.com/embed/mgid:uma:videolist:mtv.com:1724375&umbeparamplaylist_rep_title=Are You The One? | Ep. 9 | White Party&umbeparamrating=noadult&umbeparamdisplay_seo=http://www.mtv.comnull&umbeparamowner_org=mtv",
+								"@contentlength": "2448",
+								"@payloadlength": "3180.5",
+								"@contextid": "0f6320b8-38b7-4fd8-84f1-9251b35d8642"
+							},
+							"uo:contentImpressions": {
+								"uo:Impression": {
+									"@url": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&cn=videoView&et=i&uxnw=&uxss=&uxct=&init=1&ct=0",
+									"@time": "0"
+								}
+							},
+							"uo:requestParameters": {
+								"uo:parameter": [{
+									"@key": "_vmn_ar",
+									"@value": "false"
+								}, {
+									"@key": "_fw_ae",
+									"@value": ""
+								}, {
+									"@key": "csid",
+									"@value": "10728175"
+								}, {
+									"@key": "midrolls",
+									"@value": ";vindico_dv_app=unicorn&vindico_dv_sdk=5.4&vindico_dv_type=Mozilla%2f5.0%20(iPhone%3b%20CPU%20iPhone%20OS%205_0%20like%20Mac%20OS%20X)%20AppleWebKit%2f534.46%20(KHTML,%20like%20Gecko)%20Version%2f5.1%20Mobile%2f9A334%20Safari%2f753&sltp;;&ptgt=a&slau=midroll&tpos=85;;&ptgt=a&slau=midroll&tpos=521;;&ptgt=a&slau=midroll&tpos=1013;;&ptgt=a&slau=midroll&tpos=1378;;&ptgt=a&slau=midroll&tpos=1632;;&ptgt=a&slau=midroll&tpos=2074;;&ptgt=a&slau=midroll&tpos=2330;;&ptgt=a&slau=midroll&tpos=2429;;&ptgt=a&slau=midroll&tpos=2449;;"
+								}, {
+									"@key": "caid",
+									"@value": "mgid:uma:videolist:mtv.com:1724375"
+								}, {
+									"@key": "vdur",
+									"@value": "2448"
+								}, {
+									"@key": "vprn",
+									"@value": "1887429250"
+								}, {
+									"@key": "_fw_h_user_agent",
+									"@value": "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+								}, {
+									"@key": "vip",
+									"@value": "74.66.82.116"
+								}]
+							},
+							"uo:timedTextURL": {
+								"#cdata-section": "http://api20-phx.unicornmedia.com/tt/31e0061b-9a2a-4287-9acf-0a2917574471/51973caf-51ff-4066-85c2-9b7861b1ce72/0f6320b8-38b7-4fd8-84f1-9251b35d8642/en/content.xml"
+							}
+						},
+						"vmap:AdBreak": [{
+							"@breakType": "linear",
+							"@breakId": "PreRoll_0_0",
+							"@timeOffset": "start",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "0",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "96379672839763963",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "Standard Pre",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=defaultImpression&et=i&_cc=4099393,1728132,,,1398982802,1&tpos=0&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DFlightxbox%0A",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "96379672839763963",
+														"Linear": {
+															"Duration": "00:00:30.2666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=complete&et=i&_cc=&tpos=0&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DFlightxbox"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=0&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=0&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=0&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=0"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=_close&et=s&_cc=&tpos=0"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099393&reid=1728132&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=0&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_85_0",
+							"@timeOffset": "00:01:25.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "1",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "14755379195750225702",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048112,2683881,,,1398982802,1&tpos=85&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286244",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "14755379195750225702",
+														"Linear": {
+															"Duration": "00:00:30.0333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=complete&et=i&_cc=&tpos=85&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=85&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=85&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=85&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=85"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=_close&et=s&_cc=&tpos=85"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=85&cr=http%3A//www.gamestop.com/collection/tomb-raider"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_521_0",
+							"@timeOffset": "00:08:41.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "2",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "7763614294274275391",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=defaultImpression&et=i&_cc=4099536,2704906,,,1398982802,1&tpos=521&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DXboxstarttest",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "7763614294274275391",
+														"Linear": {
+															"Duration": "00:00:30.2000000+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=complete&et=i&_cc=&tpos=521&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DXboxcompletetest"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=_close&et=s&_cc=&tpos=521"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=521&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_521_1",
+							"@timeOffset": "00:08:41.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "3",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "11366643203267416567",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048124,2683954,,,1398982802,1&tpos=521&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286254",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "11366643203267416567",
+														"Linear": {
+															"Duration": "00:00:30.8666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=complete&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=_close&et=s&_cc=&tpos=521"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=521&cr=http%3A//www.tacobell.com/tacobell/store-locator"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_521_2",
+							"@timeOffset": "00:08:41.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "4",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16697720725524865121",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=defaultImpression&et=i&_cc=4099842,2704987,,,1398982802,1&tpos=521&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16697720725524865121",
+														"Linear": {
+															"Duration": "00:00:30.1666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=complete&et=i&_cc=&tpos=521&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtestcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=_close&et=s&_cc=&tpos=521"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=521&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_521_3",
+							"@timeOffset": "00:08:41.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "5",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "8686305453715749850",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048120,2683930,,,1398982802,1&tpos=521&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286251",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "8686305453715749850",
+														"Linear": {
+															"Duration": "00:00:15.0666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=3&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=11&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=complete&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=521&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=521"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=_close&et=s&_cc=&tpos=521"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=521&cr=http%3A//www.epicplaydate.com"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1013_0",
+							"@timeOffset": "00:16:53.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "6",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "5200203081147039142",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048116,2683905,,,1398982802,1&tpos=1013&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286247",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "5200203081147039142",
+														"Linear": {
+															"Duration": "00:00:17.9666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=complete&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=_close&et=s&_cc=&tpos=1013"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=1013&cr=http%3A//www.theincredibleburtwonderstone.com/index.html"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1013_1",
+							"@timeOffset": "00:16:53.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "7",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16925014967931715349",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=defaultImpression&et=i&_cc=4099629,2704960,,,1398982802,1&tpos=1013&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16925014967931715349",
+														"Linear": {
+															"Duration": "00:00:17.2333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=complete&et=i&_cc=&tpos=1013&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtrackcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=_close&et=s&_cc=&tpos=1013"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=1013&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1013_2",
+							"@timeOffset": "00:16:53.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "8",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "96379672839763963",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=defaultImpression&et=i&_cc=4099394,1728132,,,1398982802,1&tpos=1013&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DFlightxbox%0A",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "96379672839763963",
+														"Linear": {
+															"Duration": "00:00:30.2666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=complete&et=i&_cc=&tpos=1013&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DFlightxbox"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=_close&et=s&_cc=&tpos=1013"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=1013&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1013_3",
+							"@timeOffset": "00:16:53.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "9",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "8686305453715749850",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=defaultImpression&et=i&_cc=4048120,2683930,,,1398982802,1&tpos=1013&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286251",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "8686305453715749850",
+														"Linear": {
+															"Duration": "00:00:15.0666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=3&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=11&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1013"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1013&cr=http%3A//www.epicplaydate.com"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1013_4",
+							"@timeOffset": "00:16:53.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "10",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "11366643203267416567",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=defaultImpression&et=i&_cc=4048124,2683954,,,1398982802,1&tpos=1013&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286254",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "11366643203267416567",
+														"Linear": {
+															"Duration": "00:00:30.8666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1013&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1013"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1013"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1013&cr=http%3A//www.tacobell.com/tacobell/store-locator"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1378_0",
+							"@timeOffset": "00:22:58.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "11",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "14755379195750225702",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=defaultImpression&et=i&_cc=4048112,2683881,,,1398982802,1&tpos=1378&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286244",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "14755379195750225702",
+														"Linear": {
+															"Duration": "00:00:30.0333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1378&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1378&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1378&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1378&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1378"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1378"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1378&cr=http%3A//www.gamestop.com/collection/tomb-raider"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1632_0",
+							"@timeOffset": "00:27:12.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "12",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "5200203081147039142",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=defaultImpression&et=i&_cc=4048116,2683905,,,1398982802,1&tpos=1632&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286247",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "5200203081147039142",
+														"Linear": {
+															"Duration": "00:00:17.9666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1632"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1632&cr=http%3A//www.theincredibleburtwonderstone.com/index.html"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1632_1",
+							"@timeOffset": "00:27:12.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "13",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "96379672839763963",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=defaultImpression&et=i&_cc=4099394,1728132,,,1398982802,1&tpos=1632&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DFlightxbox%0A",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "96379672839763963",
+														"Linear": {
+															"Duration": "00:00:30.2666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1632&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DFlightxbox"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1632"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1632&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1632_2",
+							"@timeOffset": "00:27:12.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "14",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "7763614294274275391",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=defaultImpression&et=i&_cc=4099536,2704906,,,1398982802,1&tpos=1632&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DXboxstarttest",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "7763614294274275391",
+														"Linear": {
+															"Duration": "00:00:30.2000000+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1632&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DXboxcompletetest"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1632"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1632&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_1632_3",
+							"@timeOffset": "00:27:12.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "15",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16925014967931715349",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=defaultImpression&et=i&_cc=4099629,2704960,,,1398982802,1&tpos=1632&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16925014967931715349",
+														"Linear": {
+															"Duration": "00:00:17.2333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=complete&et=i&_cc=&tpos=1632&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtrackcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=1632&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=1632"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=_close&et=s&_cc=&tpos=1632"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=1632&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2074_0",
+							"@timeOffset": "00:34:34.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "16",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16697720725524865121",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=defaultImpression&et=i&_cc=4099842,2704987,,,1398982802,1&tpos=2074&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16697720725524865121",
+														"Linear": {
+															"Duration": "00:00:30.1666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=complete&et=i&_cc=&tpos=2074&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtestcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=firstQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=midPoint&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_un-mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_collapse&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_expand&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_pause&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_resume&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_rewind&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=_close&et=s&_cc=&tpos=2074"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=1&auid=&cn=defaultClick&et=c&_cc=&tpos=2074&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2074_1",
+							"@timeOffset": "00:34:34.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "17",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "5200203081147039142",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=defaultImpression&et=i&_cc=4048116,2683905,,,1398982802,1&tpos=2074&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286247",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "5200203081147039142",
+														"Linear": {
+															"Duration": "00:00:17.9666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2074"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2074&cr=http%3A//www.theincredibleburtwonderstone.com/index.html"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2074_2",
+							"@timeOffset": "00:34:34.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "18",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "96379672839763963",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=defaultImpression&et=i&_cc=4099394,1728132,,,1398982802,1&tpos=2074&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DFlightxbox%0A",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "96379672839763963",
+														"Linear": {
+															"Duration": "00:00:30.2666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2074&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DFlightxbox"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2074"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099394&reid=1728132&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2074&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2074_3",
+							"@timeOffset": "00:34:34.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "19",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "7763614294274275391",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=defaultImpression&et=i&_cc=4099536,2704906,,,1398982802,1&tpos=2074&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3DXboxstarttest",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "7763614294274275391",
+														"Linear": {
+															"Duration": "00:00:30.2000000+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2074&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3DXboxcompletetest"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2074&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2074"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2074"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099536&reid=2704906&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2074&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2330_0",
+							"@timeOffset": "00:38:50.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "20",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16697720725524865121",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=defaultImpression&et=i&_cc=4099842,2704987,,,1398982802,1&tpos=2330&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16697720725524865121",
+														"Linear": {
+															"Duration": "00:00:30.1666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2330&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtestcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2330"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099842&reid=2704987&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2330&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2330_1",
+							"@timeOffset": "00:38:50.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "21",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "16925014967931715349",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=defaultImpression&et=i&_cc=4099629,2704960,,,1398982802,1&tpos=2330&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3Dxboxteststart",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "16925014967931715349",
+														"Linear": {
+															"Duration": "00:00:17.2333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2330&iw=&uxnw=&uxss=&uxct=&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent5%26v0%3Dxboxtrackcomplete"
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2330"
+																}]
+															},
+															"VideoClicks": {
+																"ClickTracking": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4099629&reid=2704960&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2330&cr="
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2330_2",
+							"@timeOffset": "00:38:50.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "22",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "8686305453715749850",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=defaultImpression&et=i&_cc=4048120,2683930,,,1398982802,1&tpos=2330&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286251",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "8686305453715749850",
+														"Linear": {
+															"Duration": "00:00:15.0666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=3&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=11&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2330"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048120&reid=2683930&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2330&cr=http%3A//www.epicplaydate.com"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2330_3",
+							"@timeOffset": "00:38:50.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "23",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "11366643203267416567",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=defaultImpression&et=i&_cc=4048124,2683954,,,1398982802,1&tpos=2330&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286254",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "11366643203267416567",
+														"Linear": {
+															"Duration": "00:00:30.8666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2330"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048124&reid=2683954&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2330&cr=http%3A//www.tacobell.com/tacobell/store-locator"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2330_4",
+							"@timeOffset": "00:38:50.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "24",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "5200203081147039142",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=defaultImpression&et=i&_cc=4048116,2683905,,,1398982802,1&tpos=2330&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286247",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "5200203081147039142",
+														"Linear": {
+															"Duration": "00:00:17.9666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=complete&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=firstQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=midPoint&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2330&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_un-mute&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_collapse&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_expand&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_pause&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_resume&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_rewind&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2330"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=_close&et=s&_cc=&tpos=2330"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048116&reid=2683905&arid=3&auid=&cn=defaultClick&et=c&_cc=&tpos=2330&cr=http%3A//www.theincredibleburtwonderstone.com/index.html"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "MidRoll_2429_0",
+							"@timeOffset": "00:40:29.000",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "25",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "14755379195750225702",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=defaultImpression&et=i&_cc=4048112,2683881,,,1398982802,1&tpos=2429&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286244",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "14755379195750225702",
+														"Linear": {
+															"Duration": "00:00:30.0333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=complete&et=i&_cc=&tpos=2429&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=firstQuartile&et=i&_cc=&tpos=2429&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=midPoint&et=i&_cc=&tpos=2429&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2429&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_mute&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_un-mute&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_collapse&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_expand&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_pause&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_resume&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_rewind&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2429"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=_close&et=s&_cc=&tpos=2429"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=2&auid=&cn=defaultClick&et=c&_cc=&tpos=2429&cr=http%3A//www.gamestop.com/collection/tomb-raider"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "PostRoll_2448_0",
+							"@timeOffset": "end",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "26",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "14755379195750225702",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "midroll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=defaultImpression&et=i&_cc=4048112,2683881,,,1398982802,1&tpos=2449&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286244",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "14755379195750225702",
+														"Linear": {
+															"Duration": "00:00:30.0333333+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=complete&et=i&_cc=&tpos=2449&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=firstQuartile&et=i&_cc=&tpos=2449&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=midPoint&et=i&_cc=&tpos=2449&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2449&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_mute&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_un-mute&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_collapse&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_expand&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_pause&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_resume&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_rewind&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2449"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=_close&et=s&_cc=&tpos=2449"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048112&reid=2683881&arid=3&auid=&cn=defaultClick&et=c&_cc=&tpos=2449&cr=http%3A//www.gamestop.com/collection/tomb-raider"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "PostRoll_2448_0",
+							"@timeOffset": "end",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "27",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "11366643203267416567",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "Post_Roll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048125,2683962,,,1398982802,1&tpos=2448&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286254",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "11366643203267416567",
+														"Linear": {
+															"Duration": "00:00:30.8666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=7&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=15&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=22&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=30&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=complete&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=_close&et=s&_cc=&tpos=2448"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048125&reid=2683962&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=2448&cr=http%3A//www.tacobell.com/tacobell/store-locator"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}, {
+							"@breakType": "linear",
+							"@breakId": "PostRoll_2448_1",
+							"@timeOffset": "end",
+							"vmap:AdSource": {
+								"@allowMultipleAds": "true",
+								"@followRedirects": "true",
+								"@id": "28",
+								"vmap:VASTData": {
+									"VAST": {
+										"@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+										"@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+										"@version": "3.0",
+										"Ad": {
+											"@id": "5200203081147039142",
+											"InLine": {
+												"AdSystem": "FreeWheel",
+												"AdTitle": "Post_Roll",
+												"Impression": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=defaultImpression&et=i&_cc=4048117,2683913,,,1398982802,1&tpos=2448&iw=&uxnw=&uxss=&uxct=&init=1&cr=http%3A//viadbo.112.2o7.net/b/ss/viadbo/1/H.23.4/s17246393647510%3F%26pageName%3DVAST%2520Test%26events%3Devent1%26v0%3D1286247",
+												"Creatives": {
+													"Creative": {
+														"@AdID": "5200203081147039142",
+														"Linear": {
+															"Duration": "00:00:17.9666666+00:00",
+															"TrackingEvents": {
+																"Tracking": [{
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=4&et=i&cn=firstQuartile"
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=8&et=i&cn=midPoint"
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=12&et=i&cn=thirdQuartile"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&metr=7&ct=17&et=i&cn=complete"
+																}, {
+																	"@event": "complete",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=complete&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "firstQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=firstQuartile&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "midpoint",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=midPoint&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "thirdQuartile",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=thirdQuartile&et=i&_cc=&tpos=2448&init=1&iw=&uxnw=&uxss=&uxct="
+																}, {
+																	"@event": "mute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_mute&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "unmute",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_un-mute&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "collapse",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_collapse&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "expand",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_expand&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "pause",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_pause&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "resume",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_resume&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "rewind",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_rewind&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "acceptInvitation",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_accept-invitation&et=s&_cc=&tpos=2448"
+																}, {
+																	"@event": "close",
+																	"#text": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=_close&et=s&_cc=&tpos=2448"
+																}]
+															},
+															"VideoClicks": {
+																"ClickThrough": "http://140cc.v.fwmrm.net/ad/l/1?s=f027&n=193465%3B82124&t=1398982802757966011&f=&r=82124&adid=4048117&reid=2683913&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=2448&cr=http%3A//www.theincredibleburtwonderstone.com/index.html"
+															},
+															"MediaFiles": null
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}]
+					}
+				},
+				"image": [{
+					"contentUri": "mgid:uma:video:mtv.com:1012992",
+					"contentDurationMs": "85",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.originmusicstor/sites/mtv.com/shows/catfish/208/full/mt_catfish_ep208_306158_next_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012993",
+					"contentDurationMs": "436522",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584157/5003940_584157_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012994",
+					"contentDurationMs": "492074",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584158/5003940_584158_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012995",
+					"contentDurationMs": "365184",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584160/5003940_584160_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012996",
+					"contentDurationMs": "254122",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584161/5003940_584161_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012997",
+					"contentDurationMs": "442112",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584162/5003940_584162_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012998",
+					"contentDurationMs": "256128",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584163/5003940_584163_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1012999",
+					"contentDurationMs": "99157",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584164/5003940_584164_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}, {
+					"contentUri": "mgid:uma:video:mtv.com:1013000",
+					"contentDurationMs": "20181",
+					"width": "300",
+					"height": "168",
+					"type": "image/jpeg",
+					"keyframeIntervalSeconds": "6",
+					"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584166/5003940_584166_20140318123203373_960x540_2200_m31_thumbs/t_{0:0000}.jpg",
+					"format": "thumbnails"
+				}],
+				"transcript": [{
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012992",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a12.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584156/5003940_584156_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a16.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584156/5003940_584156_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012993",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a13.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584157/5003940_584157_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a11.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584157/5003940_584157_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012994",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a4.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584158/5003940_584158_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a6.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584158/5003940_584158_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012995",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a5.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584160/5003940_584160_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a15.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584160/5003940_584160_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012996",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a12.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584161/5003940_584161_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a20.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584161/5003940_584161_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012997",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a11.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584162/5003940_584162_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a5.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584162/5003940_584162_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012998",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a12.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584163/5003940_584163_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a10.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584163/5003940_584163_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1012999",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a5.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584164/5003940_584164_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a15.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584164/5003940_584164_20140318123203373.dfxp.xml"
+					}]
+				}, {
+					"kind": "captions",
+					"contentUri": "mgid:uma:video:mtv.com:1013000",
+					"srclang": "en",
+					"label": "English",
+					"typographic": [{
+						"format": "cea-608",
+						"src": "http://a19.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584166/5003940_584166_20140318123203373.SCC"
+					}, {
+						"format": "ttml",
+						"src": "http://a13.akadl.mtvnservices.com/10740/mtvnorigin/gsp.alias/mediabus/mtv.com/2014/03/18/12/32/584166/5003940_584166_20140318123203373.dfxp.xml"
+					}]
+				}],
+				"beacon": [{
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012992&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012993&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012994&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012995&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012996&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012997&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012998&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1012999&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}, {
+					"url": "http://t.flux.com/tracking.gif?CMU=D3FCFFFF0002D51D0002FFFFFCD3&CUR=mgid:uma:video:mtv.com:1013000&WN=MTVNVideoPlayer&FTG=1&REF={ref}",
+					"startTime": "0"
+				}]
+			}, {
+				"format": "png",
+				"xPercent": "95",
+				"yPercent": "5",
+				"startTime": "0",
+				"duration": "12000",
+				"width": "41",
+				"height": "28",
+				"src": "http://www.mtv.com/player/assets/images/bug.png",
+				"placement": "overlay"
+			}]
+		}
+	}
+}

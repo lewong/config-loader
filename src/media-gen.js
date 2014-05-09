@@ -1,5 +1,5 @@
 /* exported MediaGen */
-/* global _, VMAPParser */
+/* global _, VMAPParser, Segments */
 var MediaGen = {
 	MEDIA_GEN_ERROR: "mediaGenError",
 	getItem: function(p) {
@@ -9,26 +9,29 @@ var MediaGen = {
 			return p.video.item;
 		}
 	},
+	isVideoItem: function(item) {
+		return _.isObject(item.vmap) || _.isObject(item.rendition) || _.isArray(item.rendition);
+	},
 	process: function(mediaGen) {
 		if (_.isString(mediaGen)) {
 			mediaGen = JSON.parse(mediaGen);
 		}
 		var item = this.getItem(mediaGen.package),
-			vmapItem;
+			result;
 		if (_.isArray(item)) {
-			// if it's an array, find the item with a vmap property.
-			vmapItem = _.find(item, function(maybeVmap) {
-				return _.isObject(maybeVmap.vmap);
-			});
-			if (vmapItem) {
-				vmapItem.overlay = _.find(item, function(maybeOverlay) {
+			// loop through all items and find the one where isVideoItem true.
+			result = _.find(item, this.isVideoItem);
+			if (result) {
+				// put the overlay on the video item.
+				result.overlay = _.find(item, function(maybeOverlay) {
 					return maybeOverlay.placement === "overlay";
 				});
 			}
-		} else if (_.isObject(item) && item.vmap) {
-			vmapItem = item;
+		} else if (this.isVideoItem(item)) {
+			// oh, here we have mediaGen.package.video.item as a object. 
+			result = item;
 		}
-		if (!vmapItem) {
+		if (!result) {
 			_.some(item, function(maybeError) {
 				if (maybeError.type === "text") {
 					throw {
@@ -38,9 +41,15 @@ var MediaGen = {
 				}
 			});
 		}
-		// return only the vmap item.
-		// and process only the vmap.
-		vmapItem.vmap = VMAPParser.process(vmapItem.vmap);
-		return vmapItem;
+		if (result.vmap) {
+			// process the vmap if it's there.
+			result.vmap = VMAPParser.process(result.vmap);
+			if (result.image) {
+				Segments.process(result.vmap.adBreaks, result.image);
+			}
+		}
+
+		// return only the video item, not any others.
+		return result;
 	}
 };

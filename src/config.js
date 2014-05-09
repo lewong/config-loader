@@ -4,6 +4,8 @@ var Config = {
 	whitelist: [
 		"feed",
 		"mediaGen",
+		"brightcove_mediagenRootURL",
+		"getImage",
 		"uri",
 		"geo",
 		"ref",
@@ -18,14 +20,18 @@ var Config = {
 		"useSegmentedScrubber",
 		"useNativeControls"
 	],
-	process: function(config, options) {
+	process: function(config) {
 		if (config) {
 			config.adFreeInterval = config.timeSinceLastAd;
 			if (_.isUndefined(config.adFreeInterval)) {
 				config.adFreeInterval = config.freewheelMinTimeBtwAds;
 			}
-			config = _.pick(config, this.whitelist.concat(options.whitelist || []));
 		}
 		return config;
+	},
+	prune: function(config, options) {
+		if (config) {
+			return _.pick(config, this.whitelist.concat(options.whitelist || []));
+		}
 	}
 };

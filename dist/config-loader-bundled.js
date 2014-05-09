@@ -1590,8 +1590,11 @@ var ConfigLoader = (function() {
 		
 				// the whole thing, content and ads.
 				totalDuration = parseFloat(vmap.Extensions.unicornOnce.payloadlength, 10);
+				// if there's only one ad break, convert it to an Array.
+				if (!_.isArray(vmap.AdBreak) && _.isObject(vmap.AdBreak)) {
+					vmap.AdBreak = [vmap.AdBreak];
+				}
 				// parse all the ad breaks.
-				// console.log("vmap.js:240 vmap.AdBreak", vmap.AdBreak);
 				var rolls = _.reduce(_.groupBy(vmap.AdBreak, function(adBreak) {
 					if (adBreak.timeOffset === OFFSET_START) {
 						return 0;
@@ -1614,8 +1617,8 @@ var ConfigLoader = (function() {
 			},
 			rawTime: rawTime,
 			formatTime: formatTime,
-			version: "Thu Apr 17 2014 16:03:02",
-			build: "0.3.0"
+			version: "Thu May 08 2014 17:22:13",
+			build: "0.3.1"
 		};
 		return VMAPParser;
 	})(_);
@@ -2073,50 +2076,43 @@ var ConfigLoader = (function() {
 		};
 		return Url;
 	})();
-	/* exported MediaGen */
-	/* global _, VMAPParser */
-	var MediaGen = {
-		MEDIA_GEN_ERROR: "mediaGenError",
-		getItem: function(p) {
-			if (p && p.item) {
-				return p.item;
-			} else {
-				return p.video.item;
-			}
-		},
-		process: function(mediaGen) {
-			if (_.isString(mediaGen)) {
-				mediaGen = JSON.parse(mediaGen);
-			}
-			var item = this.getItem(mediaGen.package),
-				vmapItem;
-			if (_.isArray(item)) {
-				// if it's an array, find the item with a vmap property.
-				vmapItem = _.find(item, function(maybeVmap) {
-					return _.isObject(maybeVmap.vmap);
-				});
-				if (vmapItem) {
-					vmapItem.overlay = _.find(item, function(maybeOverlay) {
-						return maybeOverlay.placement === "overlay";
-					});
+	/* exported Request */
+	var Request = function(url, success, error) {
+		var request = this.request = new XMLHttpRequest();
+		request.open('GET', url, true);
+		request.setRequestHeader("Accept", "application/json");
+	
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				// Success!
+				var result,
+					err;
+				try {
+					result = JSON.parse(request.responseText);
+				} catch (e) {
+					err = e;
 				}
-			} else if (_.isObject(item) && item.vmap) {
-				vmapItem = item;
+				if (result) {
+					success(result);
+				} else {
+					error(err);
+				}
+			} else {
+				// We reached our target server, but it returned an error
+				error("Load Error, http status:" + request.status + " for " + url);
 			}
-			if (!vmapItem) {
-				_.some(item, function(maybeError) {
-					if (maybeError.type === "text") {
-						throw {
-							name: MediaGen.MEDIA_GEN_ERROR,
-							message: maybeError.text
-						};
-					}
-				});
-			}
-			// return only the vmap item.
-			// and process only the vmap.
-			vmapItem.vmap = VMAPParser.process(vmapItem.vmap);
-			return vmapItem;
+		};
+	
+		request.onerror = function() {
+			error("Load Error, http status:" + request.status + " for " + url);
+		};
+	
+		request.send();
+	};
+	
+	Request.prototype = {
+		abort: function() {
+			this.request.abort();
 		}
 	};
 	// in a few cases we've chosen optimizing script length over efficiency of code.
@@ -2203,43 +2199,123 @@ var ConfigLoader = (function() {
 			return obj;
 		}
 	};
-	/* exported Request */
-	var Request = function(url, success, error) {
-		var request = this.request = new XMLHttpRequest();
-		request.open('GET', url, true);
-		request.setRequestHeader("Accept", "application/json");
-	
-		request.onload = function() {
-			if (request.status >= 200 && request.status < 400) {
-				// Success!
-				var result,
-					err;
-				try {
-					result = JSON.parse(request.responseText);
-				} catch (e) {
-					err = e;
-				}
-				if (result) {
-					success(result);
-				} else {
-					error(err);
-				}
+	/* exported MediaGen */
+	/* global _, VMAPParser, Segments */
+	var MediaGen = {
+		MEDIA_GEN_ERROR: "mediaGenError",
+		getItem: function(p) {
+			if (p && p.item) {
+				return p.item;
 			} else {
-				// We reached our target server, but it returned an error
-				error(request.status);
+				return p.video.item;
 			}
-		};
+		},
+		isVideoItem: function(item) {
+			return _.isObject(item.vmap) || _.isObject(item.rendition) || _.isArray(item.rendition);
+		},
+		process: function(mediaGen) {
+			if (_.isString(mediaGen)) {
+				mediaGen = JSON.parse(mediaGen);
+			}
+			var item = this.getItem(mediaGen.package),
+				result;
+			if (_.isArray(item)) {
+				// loop through all items and find the one where isVideoItem true.
+				result = _.find(item, this.isVideoItem);
+				if (result) {
+					// put the overlay on the video item.
+					result.overlay = _.find(item, function(maybeOverlay) {
+						return maybeOverlay.placement === "overlay";
+					});
+				}
+			} else if (this.isVideoItem(item)) {
+				// oh, here we have mediaGen.package.video.item as a object. 
+				result = item;
+			}
+			if (!result) {
+				_.some(item, function(maybeError) {
+					if (maybeError.type === "text") {
+						throw {
+							name: MediaGen.MEDIA_GEN_ERROR,
+							message: maybeError.text
+						};
+					}
+				});
+			}
+			if (result.vmap) {
+				// process the vmap if it's there.
+				result.vmap = VMAPParser.process(result.vmap);
+				if (result.image) {
+					Segments.process(result.vmap.adBreaks, result.image);
+				}
+			}
 	
-		request.onerror = function() {
-			error(request.status);
-		};
-	
-		request.send();
+			// return only the video item, not any others.
+			return result;
+		}
 	};
-	
-	Request.prototype = {
-		abort: function() {
-			this.request.abort();
+	/* global _ */
+	/* exported Segments */
+	var Segments = {
+		process: function(adBreaks, segments) {
+			return Segments.adjustForAds(adBreaks, Segments.configureSegments(segments));
+		},
+		configureSegments: function(segments) {
+			var currentTime = 0,
+				truncate = function(num) {
+					return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
+				};
+			return _.map(segments, function(segment) {
+				// make sure these are numbers. numbers are string in media gen world.
+				_.each(["contentDurationMs", "keyframeIntervalSeconds", "width", "height"], function(prop) {
+					segment[prop] = parseFloat(segment[prop], 10);
+				});
+				// why ms? convert to seconds.
+				segment.duration = truncate(segment.contentDurationMs / 1000);
+				segment.startTime = truncate(currentTime);
+				segment.endTime = truncate(currentTime + segment.duration);
+				currentTime += segment.duration;
+				return segment;
+			});
+		},
+		adjustForAds: function(adBreaks, segments) {
+			// For each ad break, 
+			_.each(adBreaks, function(adBreak) {
+				// loop through each segment
+				_.each(segments, function(segment) {
+					// if the ad break start time is less than the segment's...
+					if (adBreak.startTime <= segment.startTime) {
+						// bump the start time and end time.
+						segment.startTime += adBreak.duration;
+						segment.endTime += adBreak.duration;
+					}
+				});
+			});
+			return segments;
+		}
+	};
+	/* global _ */
+	/* exported Images */
+	var Images = {
+		getTimeString: function(chars) {
+			var s = "";
+			_.times(4 - chars, function() {
+				s += "0";
+			});
+			return s;
+		},
+		getImage: function(segments, time) {
+			time = Math.floor(time);
+			var foundSegment = _.find(segments, function(segment) {
+				return time >= segment.startTime && time < segment.endTime;
+			});
+			if (foundSegment) {
+				foundSegment = _.clone(foundSegment);
+				var imageNumber = Math.floor((time - foundSegment.startTime) / foundSegment.keyframeIntervalSeconds),
+					padding = Images.getTimeString(imageNumber.toString().length);
+				foundSegment.src = foundSegment.src.replace("{0:0000}", padding + imageNumber);
+			}
+			return foundSegment;
 		}
 	};
 	/* exported Config */
@@ -2248,6 +2324,8 @@ var ConfigLoader = (function() {
 		whitelist: [
 			"feed",
 			"mediaGen",
+			"brightcove_mediagenRootURL",
+			"getImage",
 			"uri",
 			"geo",
 			"ref",
@@ -2262,19 +2340,23 @@ var ConfigLoader = (function() {
 			"useSegmentedScrubber",
 			"useNativeControls"
 		],
-		process: function(config, options) {
+		process: function(config) {
 			if (config) {
 				config.adFreeInterval = config.timeSinceLastAd;
 				if (_.isUndefined(config.adFreeInterval)) {
 					config.adFreeInterval = config.freewheelMinTimeBtwAds;
 				}
-				config = _.pick(config, this.whitelist.concat(options.whitelist || []));
 			}
 			return config;
+		},
+		prune: function(config, options) {
+			if (config) {
+				return _.pick(config, this.whitelist.concat(options.whitelist || []));
+			}
 		}
 	};
 	/* exported ConfigLoader */
-	/* global _, EventEmitter, MediaGen, Config, Url, Request */
+	/* global _, EventEmitter, MediaGen, Config, Url, Request, Images */
 	var ConfigLoader = function(options) {
 		this.options = options || {};
 		_.defaults(options, {
@@ -2305,18 +2387,42 @@ var ConfigLoader = (function() {
 	ConfigLoader.DEFAULT_ERROR_MESSAGE = "Sorry, this video is currently not available.";
 	ConfigLoader.prototype = {
 		initialize: function() {
-			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError");
+			_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError", "getImage");
 			EventEmitter.convert(this);
 		},
 		shouldLoadMediaGen: true,
-		load: function() {
+		getConfigUrl: function() {
 			var url = template(this.options.configURL || CONFIG_URL, this.options, {});
-			url = Url.setParameters(url, this.options.configParams);
+			return Url.setParameters(url, this.options.configParams);
+		},
+		load: function() {
 			this.request = new Request(
-				url,
+				this.getConfigUrl(),
 				this.onConfigLoaded,
 				this.onLoadError
 			);
+		},
+		getImage: function(time) {
+			if (this.config) {
+				var mediaGen = this.config.mediaGen;
+				if (mediaGen) {
+					return Images.getImage(mediaGen.image, time);
+				}
+			}
+			return undefined;
+		},
+		getMediaGenUrl: function() {
+			var mediaGen = this.options.mediaGenURL || this.config[this.options.mediaGenProperty || "mediaGen"];
+			if (!mediaGen) {
+				this.onError(this.getErrorMessage("no media gen specified."));
+			} else {
+				var mediaGenParams = _.clone(this.options.mediaGenParams);
+				_.each(this.config.overrideParams, function(value, key) {
+					mediaGenParams["UMBEPARAM" + key] = value;
+				});
+				mediaGen = Url.setParameters(template(mediaGen, this.config), mediaGenParams);
+			}
+			return mediaGen;
 		},
 		onConfigLoaded: function(config) {
 			if (config.config) {
@@ -2328,17 +2434,13 @@ var ConfigLoader = (function() {
 				return;
 			}
 			this.config = Config.process(config, this.options);
+			this.config.getImage = this.getImage;
 			if (this.options.shouldLoadMediaGen) {
 				// the config property for the mediaGen can be specified.
-				var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+				var mediaGen = this.getMediaGenUrl();
 				if (!mediaGen) {
 					this.onError(this.getErrorMessage("no media gen specified."));
 				} else {
-					var mediaGenParams = _.clone(this.options.mediaGenParams);
-					_.each(config.overrideParams, function(value, key) {
-						mediaGenParams["UMBEPARAM" + key] = value;
-					});
-					mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
 					this.request = new Request(
 						mediaGen,
 						this.onMediaGenLoaded,
@@ -2367,6 +2469,7 @@ var ConfigLoader = (function() {
 			}
 		},
 		sendReady: function() {
+			this.config = Config.prune(this.config, this.options);
 			this.emit(Events.READY, {
 				type: Events.READY,
 				data: this.config,
@@ -2392,7 +2495,7 @@ var ConfigLoader = (function() {
 			}
 		}
 	};
-	ConfigLoader.version = "0.5.0";
-	ConfigLoader.build = "Wed Apr 23 2014 16:13:58";
+	ConfigLoader.version = "0.6.0";
+	ConfigLoader.build = "Fri May 09 2014 13:27:57";
 	return ConfigLoader;
 })();

@@ -1,5 +1,5 @@
 /* exported ConfigLoader */
-/* global _, EventEmitter, MediaGen, Config, Url, Request */
+/* global _, EventEmitter, MediaGen, Config, Url, Request, Images */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
@@ -30,18 +30,42 @@ var ConfigLoader = function(options) {
 ConfigLoader.DEFAULT_ERROR_MESSAGE = "Sorry, this video is currently not available.";
 ConfigLoader.prototype = {
 	initialize: function() {
-		_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError");
+		_.bindAll(this, "onConfigLoaded", "onMediaGenLoaded", "onError", "onLoadError", "getImage");
 		EventEmitter.convert(this);
 	},
 	shouldLoadMediaGen: true,
-	load: function() {
+	getConfigUrl: function() {
 		var url = template(this.options.configURL || CONFIG_URL, this.options, {});
-		url = Url.setParameters(url, this.options.configParams);
+		return Url.setParameters(url, this.options.configParams);
+	},
+	load: function() {
 		this.request = new Request(
-			url,
+			this.getConfigUrl(),
 			this.onConfigLoaded,
 			this.onLoadError
 		);
+	},
+	getImage: function(time) {
+		if (this.config) {
+			var mediaGen = this.config.mediaGen;
+			if (mediaGen) {
+				return Images.getImage(mediaGen.image, time);
+			}
+		}
+		return undefined;
+	},
+	getMediaGenUrl: function() {
+		var mediaGen = this.options.mediaGenURL || this.config[this.options.mediaGenProperty || "mediaGen"];
+		if (!mediaGen) {
+			this.onError(this.getErrorMessage("no media gen specified."));
+		} else {
+			var mediaGenParams = _.clone(this.options.mediaGenParams);
+			_.each(this.config.overrideParams, function(value, key) {
+				mediaGenParams["UMBEPARAM" + key] = value;
+			});
+			mediaGen = Url.setParameters(template(mediaGen, this.config), mediaGenParams);
+		}
+		return mediaGen;
 	},
 	onConfigLoaded: function(config) {
 		if (config.config) {
@@ -53,17 +77,13 @@ ConfigLoader.prototype = {
 			return;
 		}
 		this.config = Config.process(config, this.options);
+		this.config.getImage = this.getImage;
 		if (this.options.shouldLoadMediaGen) {
 			// the config property for the mediaGen can be specified.
-			var mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
+			var mediaGen = this.getMediaGenUrl();
 			if (!mediaGen) {
 				this.onError(this.getErrorMessage("no media gen specified."));
 			} else {
-				var mediaGenParams = _.clone(this.options.mediaGenParams);
-				_.each(config.overrideParams, function(value, key) {
-					mediaGenParams["UMBEPARAM" + key] = value;
-				});
-				mediaGen = Url.setParameters(template(mediaGen, config), mediaGenParams);
 				this.request = new Request(
 					mediaGen,
 					this.onMediaGenLoaded,
@@ -92,6 +112,7 @@ ConfigLoader.prototype = {
 		}
 	},
 	sendReady: function() {
+		this.config = Config.prune(this.config, this.options);
 		this.emit(Events.READY, {
 			type: Events.READY,
 			data: this.config,

@@ -7,9 +7,11 @@ var ConfigLoader = (function() {
 	}).apply({});
 	//= ../../components/vmap-parser/dist/vmap-parser.js
 	//= ../../components/url-util/dist/url-util.js
-	//= ../media-gen.js
-	//= ../event-emitter.js
 	//= ../request.js
+	//= ../event-emitter.js
+	//= ../media-gen.js
+	//= ../segments.js
+	//= ../images.js
 	//= ../config.js
 	//= ../config-loader.js
 	return ConfigLoader;

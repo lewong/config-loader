@@ -1,3 +1,10 @@
+
+0.6.0 / 2014-05-09 
+==================
+
+ * Add method for thumbnail images. `getImage`. 
+ * MediaGen parser will find renditions item or vmap item.
+
 0.5.0 / 2014-04-22 
 ==================
 
