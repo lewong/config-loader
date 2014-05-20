@@ -7,12 +7,6 @@ var ConfigLoader = (function() {
 	}).apply({});
 	//= ../../components/vmap-parser/dist/vmap-parser.js
 	//= ../../components/url-util/dist/url-util.js
-	//= ../request.js
-	//= ../event-emitter.js
-	//= ../media-gen.js
-	//= ../segments.js
-	//= ../images.js
-	//= ../config.js
-	//= ../config-loader.js
+	//= ../includes.js
 	return ConfigLoader;
 })();
