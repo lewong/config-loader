@@ -480,4 +480,4 @@ ConfigLoader.prototype = {
 	}
 };
 ConfigLoader.version = "0.7.0";
-ConfigLoader.build = "Tue May 20 2014 20:20:12";
+ConfigLoader.build = "Wed May 21 2014 12:56:38";

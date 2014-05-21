@@ -94,7 +94,7 @@ test("UMBEParams test images", function() {
 	equal(result.getParameter("UMBEPARAMsed"), 180, "contains ssd");
 	equal(result.getParameter("UMBEPARAMplLen"), 2, "contains plLen");
 	equal(result.getParameter("UMBEPARAMtest2ndParam"), "test second umbe param", "contains passed in umbeParam");
-	// TODO 
+	// TODO a bug in Url.getParamater.
 	equal(result.getParameter("UMBEPARAMUMBEPARAMtest2ndParam"), null, "bad param get");
 });
 test("UMBEParams test single image", function() {
@@ -132,4 +132,5 @@ test("UMBEParams test single image", function() {
 	equal(result.getParameter("UMBEPARAMtest2ndParam"), "test second umbe param", "contains passed in umbeParam");
 	// TODO 
 	equal(result.getParameter("UMBEPARAMUMBEPARAMtest2ndParam"), null, "bad param get");
+	equal(result, "http://test-umbe-params.com/video.m3u8?a=b&c=d&UMBEPARAMc66=uri%3Ahi%3Abye%3Auri&UMBEPARAMv28=playlist%20title&UMBEPARAMplTitle=playlist%20title&UMBEPARAMc30=first%20segment%20uri&UMBEPARAMplLen=1&UMBEPARAMssd=20&UMBEPARAMsed=180&testParam=test%20umbe%20param&UMBEPARAMtest2ndParam=test%20second%20umbe%20param&UMBEPARAMtest3rdParam=test%20third%20umbe%20param&UMBEPARAMtestParam=test%20umbe%20param", "full url matches.");
 });
