@@ -8,43 +8,43 @@ var VMAPParser = (function(_) {
 		POSTROLL = "postroll",
 		OFFSET_START = "start",
 		OFFSET_END = "end";
-
+	
 	function truncate(num) {
 		return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
 	}
-
+	
 	/**
 	 * @ignore
 	 * convert something like "00:00:29.9330000+00:00" to 29.93
 	 */
-
+	
 	function rawTime(seconds) {
 		var b = seconds.split(/\D/);
 		return (+b[0]) * 60 * 60 + (+b[1]) * 60 + (+b[2]) + (b[3] ? parseFloat("." + truncate(b[3])) : 0);
 	}
-
+	
 	/**
 	 * @ignore
 	 * Used for logging
 	 */
-
+	
 	function formatTime(secs) {
 		if (_.isString(secs)) {
 			secs = parseFloat(secs, 10);
 		}
 		var hours = Math.floor(secs / (60 * 60));
-
+	
 		var divisor_for_minutes = secs % (60 * 60);
 		var minutes = Math.floor(divisor_for_minutes / 60);
-
+	
 		var seconds = divisor_for_minutes % 60;
 		seconds = Math.round(seconds * 100) / 100;
-
+	
 		// This line gives you 12-hour (not 24) time
 		if (hours > 12) {
 			hours = hours - 12;
 		}
-
+	
 		// These lines ensure you have two-digits
 		if (hours < 10) {
 			hours = "0" + hours;
@@ -55,17 +55,17 @@ var VMAPParser = (function(_) {
 		if (seconds < 10) {
 			seconds = "0" + seconds;
 		}
-
+	
 		// This formats your string to HH:MM:SS
 		var t = hours + ":" + minutes + ":" + seconds;
-
+	
 		return t;
 	}
 	/**
 	 * @ignore
 	 * find all objects with a specific name.
 	 */
-
+	
 	function find(source, target) {
 		var result = [];
 		if (_.isObject(source) || _.isArray(source)) {
@@ -84,13 +84,13 @@ var VMAPParser = (function(_) {
 	 * @ignore
 	 * @return {String} Duration
 	 */
-
+	
 	function getAdDuration(data) {
 		var durations = find(data, "Duration");
 		// seems to be only one?
 		return rawTime(durations[0]);
 	}
-
+	
 	function getClickThrough(data) {
 		var clickThrough = find(data, "ClickThrough");
 		if (clickThrough.length > 0) {
@@ -98,12 +98,12 @@ var VMAPParser = (function(_) {
 		}
 		return null;
 	}
-
+	
 	/**
 	 * @ignore
 	 * remove namespaces, @'s, #'s and any unwanted nodes.
 	 */
-
+	
 	function clean(value, key, obj) {
 		if (key.indexOf("xmlns") === 0) {
 			delete obj[key];
@@ -118,7 +118,7 @@ var VMAPParser = (function(_) {
 			}
 		}
 	}
-
+	
 	function cleanProps(obj) {
 		_.each(_.rest(_.toArray(arguments)), function(value) {
 			var cleaning = obj[value];
@@ -131,8 +131,8 @@ var VMAPParser = (function(_) {
 			}
 		});
 	}
-
-
+	
+	
 	function getAdType(timeOffset) {
 		if (timeOffset === OFFSET_START) {
 			return PREROLL;
@@ -141,7 +141,7 @@ var VMAPParser = (function(_) {
 		}
 		return MIDROLL;
 	}
-
+	
 	function getOffsetFromItem(type, duration) {
 		switch (type) {
 			case "firstQuartile":
@@ -156,7 +156,7 @@ var VMAPParser = (function(_) {
 				break;
 		}
 	}
-
+	
 	function createTrackers(breakId, duration, tracking, trackerStartTime, trackers) {
 		_.each(tracking, function(item) {
 			_.each(item, clean);
@@ -194,13 +194,13 @@ var VMAPParser = (function(_) {
 				accumulatedAdTime = 0,
 				totalPostrollTime = 0,
 				totalDuration;
-
+	
 			// clean up the property names.
 			vmap = vmap["vmap:VMAP"];
 			_.each(vmap, clean);
 			cleanProps(vmap, "AdBreak", "Extensions");
 			cleanProps(vmap.Extensions, "unicornOnce", "requestParameters");
-
+	
 			function processAdPod(rolls, group, offset) {
 				// the start time for the group based on other previous group times.
 				var adPodOffset = accumulatedAdTime + parseFloat(offset, 10);
@@ -238,7 +238,7 @@ var VMAPParser = (function(_) {
 				});
 				return rolls;
 			}
-
+	
 			// the whole thing, content and ads.
 			totalDuration = parseFloat(vmap.Extensions.unicornOnce.payloadlength, 10);
 			// if there's only one ad break, convert it to an Array.
@@ -259,7 +259,7 @@ var VMAPParser = (function(_) {
 			// console.log("rolls", rolls);
 			return {
 				uri: vmap.Extensions.unicornOnce.contenturi,
-				timedTextURL: vmap.Extensions.timedTextURL["#cdata-section"],
+				timedTextURL: vmap.Extensions.timedTextURL ? vmap.Extensions.timedTextURL["#cdata-section"] : undefined,
 				contentDuration: truncate(parseFloat(vmap.Extensions.unicornOnce.contentlength, 10)),
 				totalDuration: truncate(totalDuration),
 				trackers: trackers,
@@ -268,8 +268,8 @@ var VMAPParser = (function(_) {
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "Thu May 08 2014 17:22:13",
-		build: "0.3.1"
+		version: "Wed May 21 2014 17:56:03",
+		build: "0.3.2"
 	};
 	return VMAPParser;
 })(_);

@@ -1,27 +1,16 @@
-/* global equal, ok, test, UMBEParams, Url */
+/* global equal, test, UMBEParams, Url */
 /* jshint devel:true */
 test("UMBEParams", function() {
 	var url = "http://test-umbe-params.com/video.m3u8?a=b&c=d",
-		config = {
-			mediaGen: {
-				vmap: {
-					uri: url
-				}
-			}
-		};
-	equal(UMBEParams.append(config), url, "appened");
+		config = {};
+	equal(UMBEParams.append(config, url), url, "appened");
 });
 test("UMBEParams", function() {
 	var url = "http://test-umbe-params.com/video.m3u8?a=b&c=d",
 		config = {
-			uri: "uri:hi:bye:uri",
-			mediaGen: {
-				vmap: {
-					uri: url
-				}
-			}
+			uri: "uri:hi:bye:uri"
 		};
-	equal(UMBEParams.append(config), url + "&UMBEPARAMc66=" + encodeURIComponent(config.uri), "appened");
+	equal(UMBEParams.append(config, url), url + "&UMBEPARAMc66=" + encodeURIComponent(config.uri), "appened");
 });
 test("UMBEParams test overrideParams", function() {
 	var url = "http://test-umbe-params.com/video.m3u8?a=b&c=d",
@@ -33,14 +22,9 @@ test("UMBEParams test overrideParams", function() {
 				owner_org: "the owner",
 				video_title_start: "video | title | start",
 				video_title_end: "video | title | end"
-			},
-			mediaGen: {
-				vmap: {
-					uri: url
-				}
 			}
 		};
-	var result = new Url(UMBEParams.append(config, {
+	var result = new Url(UMBEParams.append(config, url, {
 		umbeParams: {
 			testParam: "test umbe param",
 			UMBEPARAMtest2ndParam: "test second umbe param",
@@ -67,9 +51,6 @@ test("UMBEParams test images", function() {
 				playlist_title: "playlist title"
 			},
 			mediaGen: {
-				vmap: {
-					uri: url
-				},
 				images: [{
 					contentUri: "first segment uri",
 					startTime: 20
@@ -79,7 +60,7 @@ test("UMBEParams test images", function() {
 				}]
 			}
 		};
-	var result = new Url(UMBEParams.append(config, {
+	var result = new Url(UMBEParams.append(config, url, {
 		umbeParams: {
 			testParam: "test umbe param",
 			UMBEPARAMtest2ndParam: "test second umbe param",
@@ -105,9 +86,6 @@ test("UMBEParams test single image", function() {
 				playlist_title: "playlist title"
 			},
 			mediaGen: {
-				vmap: {
-					uri: url
-				},
 				images: [{
 					contentUri: "first segment uri",
 					startTime: 20,
@@ -115,7 +93,7 @@ test("UMBEParams test single image", function() {
 				}]
 			}
 		};
-	var result = new Url(UMBEParams.append(config, {
+	var result = new Url(UMBEParams.append(config, url, {
 		umbeParams: {
 			testParam: "test umbe param",
 			UMBEPARAMtest2ndParam: "test second umbe param",

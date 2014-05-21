@@ -60,6 +60,7 @@ ConfigLoader.prototype = {
 		if (!mediaGen) {
 			this.onError(this.getErrorMessage("no media gen specified."));
 		} else {
+			mediaGen = UMBEParams.append(this.config, mediaGen, this.options);
 			mediaGen = Url.setParameters(template(mediaGen, config), _.clone(this.options.mediaGenParams));
 		}
 		return mediaGen;
@@ -105,7 +106,6 @@ ConfigLoader.prototype = {
 		}
 		if (!error) {
 			this.config.mediaGen = mediaGen;
-			UMBEParams.append(this.config, this.options);
 			this.sendReady();
 		}
 	},

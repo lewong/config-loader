@@ -266,7 +266,7 @@
 			// console.log("rolls", rolls);
 			return {
 				uri: vmap.Extensions.unicornOnce.contenturi,
-				timedTextURL: vmap.Extensions.timedTextURL["#cdata-section"],
+				timedTextURL: vmap.Extensions.timedTextURL ? vmap.Extensions.timedTextURL["#cdata-section"] : undefined,
 				contentDuration: truncate(parseFloat(vmap.Extensions.unicornOnce.contentlength, 10)),
 				totalDuration: truncate(totalDuration),
 				trackers: trackers,
@@ -275,8 +275,8 @@
 		},
 		rawTime: rawTime,
 		formatTime: formatTime,
-		version: "Thu May 08 2014 17:22:13",
-		build: "0.3.1"
+		version: "Wed May 21 2014 17:56:03",
+		build: "0.3.2"
 	};
 	return VMAPParser;
 }));

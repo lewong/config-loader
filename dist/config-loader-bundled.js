@@ -1357,43 +1357,43 @@ var ConfigLoader = (function() {
 			POSTROLL = "postroll",
 			OFFSET_START = "start",
 			OFFSET_END = "end";
-	
+		
 		function truncate(num) {
 			return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
 		}
-	
+		
 		/**
 		 * @ignore
 		 * convert something like "00:00:29.9330000+00:00" to 29.93
 		 */
-	
+		
 		function rawTime(seconds) {
 			var b = seconds.split(/\D/);
 			return (+b[0]) * 60 * 60 + (+b[1]) * 60 + (+b[2]) + (b[3] ? parseFloat("." + truncate(b[3])) : 0);
 		}
-	
+		
 		/**
 		 * @ignore
 		 * Used for logging
 		 */
-	
+		
 		function formatTime(secs) {
 			if (_.isString(secs)) {
 				secs = parseFloat(secs, 10);
 			}
 			var hours = Math.floor(secs / (60 * 60));
-	
+		
 			var divisor_for_minutes = secs % (60 * 60);
 			var minutes = Math.floor(divisor_for_minutes / 60);
-	
+		
 			var seconds = divisor_for_minutes % 60;
 			seconds = Math.round(seconds * 100) / 100;
-	
+		
 			// This line gives you 12-hour (not 24) time
 			if (hours > 12) {
 				hours = hours - 12;
 			}
-	
+		
 			// These lines ensure you have two-digits
 			if (hours < 10) {
 				hours = "0" + hours;
@@ -1404,17 +1404,17 @@ var ConfigLoader = (function() {
 			if (seconds < 10) {
 				seconds = "0" + seconds;
 			}
-	
+		
 			// This formats your string to HH:MM:SS
 			var t = hours + ":" + minutes + ":" + seconds;
-	
+		
 			return t;
 		}
 		/**
 		 * @ignore
 		 * find all objects with a specific name.
 		 */
-	
+		
 		function find(source, target) {
 			var result = [];
 			if (_.isObject(source) || _.isArray(source)) {
@@ -1433,13 +1433,13 @@ var ConfigLoader = (function() {
 		 * @ignore
 		 * @return {String} Duration
 		 */
-	
+		
 		function getAdDuration(data) {
 			var durations = find(data, "Duration");
 			// seems to be only one?
 			return rawTime(durations[0]);
 		}
-	
+		
 		function getClickThrough(data) {
 			var clickThrough = find(data, "ClickThrough");
 			if (clickThrough.length > 0) {
@@ -1447,12 +1447,12 @@ var ConfigLoader = (function() {
 			}
 			return null;
 		}
-	
+		
 		/**
 		 * @ignore
 		 * remove namespaces, @'s, #'s and any unwanted nodes.
 		 */
-	
+		
 		function clean(value, key, obj) {
 			if (key.indexOf("xmlns") === 0) {
 				delete obj[key];
@@ -1467,7 +1467,7 @@ var ConfigLoader = (function() {
 				}
 			}
 		}
-	
+		
 		function cleanProps(obj) {
 			_.each(_.rest(_.toArray(arguments)), function(value) {
 				var cleaning = obj[value];
@@ -1480,8 +1480,8 @@ var ConfigLoader = (function() {
 				}
 			});
 		}
-	
-	
+		
+		
 		function getAdType(timeOffset) {
 			if (timeOffset === OFFSET_START) {
 				return PREROLL;
@@ -1490,7 +1490,7 @@ var ConfigLoader = (function() {
 			}
 			return MIDROLL;
 		}
-	
+		
 		function getOffsetFromItem(type, duration) {
 			switch (type) {
 				case "firstQuartile":
@@ -1505,7 +1505,7 @@ var ConfigLoader = (function() {
 					break;
 			}
 		}
-	
+		
 		function createTrackers(breakId, duration, tracking, trackerStartTime, trackers) {
 			_.each(tracking, function(item) {
 				_.each(item, clean);
@@ -1543,13 +1543,13 @@ var ConfigLoader = (function() {
 					accumulatedAdTime = 0,
 					totalPostrollTime = 0,
 					totalDuration;
-	
+		
 				// clean up the property names.
 				vmap = vmap["vmap:VMAP"];
 				_.each(vmap, clean);
 				cleanProps(vmap, "AdBreak", "Extensions");
 				cleanProps(vmap.Extensions, "unicornOnce", "requestParameters");
-	
+		
 				function processAdPod(rolls, group, offset) {
 					// the start time for the group based on other previous group times.
 					var adPodOffset = accumulatedAdTime + parseFloat(offset, 10);
@@ -1587,7 +1587,7 @@ var ConfigLoader = (function() {
 					});
 					return rolls;
 				}
-	
+		
 				// the whole thing, content and ads.
 				totalDuration = parseFloat(vmap.Extensions.unicornOnce.payloadlength, 10);
 				// if there's only one ad break, convert it to an Array.
@@ -1608,7 +1608,7 @@ var ConfigLoader = (function() {
 				// console.log("rolls", rolls);
 				return {
 					uri: vmap.Extensions.unicornOnce.contenturi,
-					timedTextURL: vmap.Extensions.timedTextURL["#cdata-section"],
+					timedTextURL: vmap.Extensions.timedTextURL ? vmap.Extensions.timedTextURL["#cdata-section"] : undefined,
 					contentDuration: truncate(parseFloat(vmap.Extensions.unicornOnce.contentlength, 10)),
 					totalDuration: truncate(totalDuration),
 					trackers: trackers,
@@ -1617,8 +1617,8 @@ var ConfigLoader = (function() {
 			},
 			rawTime: rawTime,
 			formatTime: formatTime,
-			version: "Thu May 08 2014 17:22:13",
-			build: "0.3.1"
+			version: "Wed May 21 2014 17:56:03",
+			build: "0.3.2"
 		};
 		return VMAPParser;
 	})(_);
@@ -2214,50 +2214,47 @@ var ConfigLoader = (function() {
 			video_title_end: "set"
 		};
 		return {
-			append: function(config, options) {
-				var mediaGen = config.mediaGen,
+			append: function(config, url, options) {
+				var mediaGen = config.mediaGen || {},
 					images = mediaGen.images,
 					overrideParams = config.overrideParams || {},
 					umbeParams = {},
 					prefix = "UMBEPARAM";
 				options = options || {};
-				if (mediaGen.vmap && mediaGen.vmap.uri) {
 	
-					// config values
-					if (config.uri) {
-						umbeParams[prefix + "c66"] = config.uri;
-					}
-	
-					// values from overrideParams
-					_.each(overrideParams, function(value, key) {
-						var umbeKey = (overrideMap[key] || key);
-						umbeParams[prefix + umbeKey] = value;
-					});
-	
-					if (overrideParams.playlist_title) {
-						// an extra value for the same key playlist_title.
-						umbeParams[prefix + "plTitle"] = overrideParams.playlist_title;
-					}
-	
-					// values from mediaGen.images
-					if (!_.isEmpty(images)) {
-						umbeParams[prefix + "c30"] = images[0].contentUri;
-						umbeParams[prefix + "plLen"] = images.length;
-						umbeParams[prefix + "ssd"] = images[0].startTime;
-						umbeParams[prefix + "sed"] = images[images.length - 1].endTime;
-					}
-					// make sure options.umbeParams contain prefix.
-					_.each(_.clone(options.umbeParams), function(value, key, list) {
-						if (key.toUpperCase().indexOf(prefix) === -1) {
-							options.umbeParams[prefix + key] = value;
-							delete list[key];
-						}
-					});
-					// override any umbeParams with options.umbeParams
-					_.extend(umbeParams, options.umbeParams);
-					mediaGen.vmap.uri = Url.setParameters(mediaGen.vmap.uri, umbeParams);
-					return mediaGen.vmap.uri;
+				// config values
+				if (config.uri) {
+					umbeParams[prefix + "c66"] = config.uri;
 				}
+	
+				// values from overrideParams
+				_.each(overrideParams, function(value, key) {
+					var umbeKey = (overrideMap[key] || key);
+					umbeParams[prefix + umbeKey] = value;
+				});
+	
+				if (overrideParams.playlist_title) {
+					// an extra value for the same key playlist_title.
+					umbeParams[prefix + "plTitle"] = overrideParams.playlist_title;
+				}
+	
+				// values from mediaGen.images
+				if (!_.isEmpty(images)) {
+					umbeParams[prefix + "c30"] = images[0].contentUri;
+					umbeParams[prefix + "plLen"] = images.length;
+					umbeParams[prefix + "ssd"] = images[0].startTime;
+					umbeParams[prefix + "sed"] = images[images.length - 1].endTime;
+				}
+				// make sure options.umbeParams contain prefix.
+				_.each(_.clone(options.umbeParams), function(value, key, list) {
+					if (key.toUpperCase().indexOf(prefix) === -1) {
+						options.umbeParams[prefix + key] = value;
+						delete list[key];
+					}
+				});
+				// override any umbeParams with options.umbeParams
+				_.extend(umbeParams, options.umbeParams);
+				return Url.setParameters(url, umbeParams);
 			}
 		};
 	})();
@@ -2479,6 +2476,7 @@ var ConfigLoader = (function() {
 			if (!mediaGen) {
 				this.onError(this.getErrorMessage("no media gen specified."));
 			} else {
+				mediaGen = UMBEParams.append(this.config, mediaGen, this.options);
 				mediaGen = Url.setParameters(template(mediaGen, config), _.clone(this.options.mediaGenParams));
 			}
 			return mediaGen;
@@ -2524,7 +2522,6 @@ var ConfigLoader = (function() {
 			}
 			if (!error) {
 				this.config.mediaGen = mediaGen;
-				UMBEParams.append(this.config, this.options);
 				this.sendReady();
 			}
 		},
@@ -2556,6 +2553,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.7.0";
-	ConfigLoader.build = "Wed May 21 2014 13:00:29";
+	ConfigLoader.build = "Wed May 21 2014 18:00:14";
 	return ConfigLoader;
 })();
