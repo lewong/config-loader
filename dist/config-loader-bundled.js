@@ -2204,55 +2204,59 @@ var ConfigLoader = (function() {
 	/* jshint devel:true */
 	var UMBEParams = (function() {
 		// map these config properties to UMBEPARAMs
-		// umbe is the key, config prop is the value.	
-		var configMap = {
-			c66: "uri"
-		},
-			overrideMap = {
-				owner: "owner_org",
-				v28: "playlist_title",
-				plTitle: "playlist_title",
-				ser: "franchise"
-			};
+		// config prop is the key, value is the umbe key.
+		var overrideMap = {
+			owner_org: "owner",
+			playlist_title: "v28",
+			artist: "v29",
+			franchise: "ser",
+			video_title_start: "sst",
+			video_title_end: "set"
+		};
 		return {
 			append: function(config, options) {
 				var mediaGen = config.mediaGen,
 					images = mediaGen.images,
+					overrideParams = config.overrideParams || {},
 					umbeParams = {},
 					prefix = "UMBEPARAM";
+				options = options || {};
 				if (mediaGen.vmap && mediaGen.vmap.uri) {
-					_.each(config.overrideParams, function(value, key) {
-						umbeParams[prefix + key] = value;
-					});
-					// values from config
-					_.each(configMap, function(value, key) {
-						if (config[value]) {
-							umbeParams[prefix + key] = config[value];
-						}
-					});
+	
+					// config values
+					if (config.uri) {
+						umbeParams[prefix + "c66"] = config.uri;
+					}
+	
 					// values from overrideParams
-					_.each(overrideMap, function(value, key) {
-						if (config.overrideParams[value]) {
-							umbeParams[prefix + key] = config.overrideParams[value];
-						}
+					_.each(overrideParams, function(value, key) {
+						var umbeKey = (overrideMap[key] || key);
+						umbeParams[prefix + umbeKey] = value;
 					});
+	
+					if (overrideParams.playlist_title) {
+						// an extra value for the same key playlist_title.
+						umbeParams[prefix + "plTitle"] = overrideParams.playlist_title;
+					}
+	
 					// values from mediaGen.images
 					if (!_.isEmpty(images)) {
-						umbeParams.c30 = images[0].contentUri;
-						umbeParams.plLen = images.length;
-						umbeParams.ssd = images[0].startTime;
-						umbeParams.sed = images[images.length - 1].endTime;
+						umbeParams[prefix + "c30"] = images[0].contentUri;
+						umbeParams[prefix + "plLen"] = images.length;
+						umbeParams[prefix + "ssd"] = images[0].startTime;
+						umbeParams[prefix + "sed"] = images[images.length - 1].endTime;
 					}
 					// make sure options.umbeParams contain prefix.
-					_.each(options.umbeParams, function(value, key, list) {
-						if (key.toLowerCase().indexOf("umbeparams") === -1) {
-							list[prefix + key] = value;
+					_.each(_.clone(options.umbeParams), function(value, key, list) {
+						if (key.toUpperCase().indexOf(prefix) === -1) {
+							options.umbeParams[prefix + key] = value;
 							delete list[key];
 						}
 					});
 					// override any umbeParams with options.umbeParams
 					_.extend(umbeParams, options.umbeParams);
 					mediaGen.vmap.uri = Url.setParameters(mediaGen.vmap.uri, umbeParams);
+					return mediaGen.vmap.uri;
 				}
 			}
 		};
@@ -2552,6 +2556,6 @@ var ConfigLoader = (function() {
 		}
 	};
 	ConfigLoader.version = "0.7.0";
-	ConfigLoader.build = "Tue May 20 2014 17:39:14";
+	ConfigLoader.build = "Tue May 20 2014 20:20:12";
 	return ConfigLoader;
 })();
