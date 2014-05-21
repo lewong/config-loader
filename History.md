@@ -1,4 +1,10 @@
 
+0.7.0 / 2014-05-21 
+==================
+
+ * Append UMBEParams to unicorn contentUri, not the media gen. 
+ * Append extra params specified here XAO-412.
+
 0.6.0 / 2014-05-09 
 ==================
 
