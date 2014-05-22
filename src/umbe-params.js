@@ -28,8 +28,10 @@ var UMBEParams = (function() {
 
 			// values from overrideParams
 			_.each(overrideParams, function(value, key) {
-				var umbeKey = (overrideMap[key] || key);
-				umbeParams[prefix + umbeKey] = value;
+				// only include override params that are in the override map.
+				if (overrideMap[key]) {
+					umbeParams[prefix + overrideMap[key]] = value;
+				}
 			});
 
 			if (overrideParams.playlist_title) {

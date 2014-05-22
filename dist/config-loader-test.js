@@ -153,8 +153,10 @@ var UMBEParams = (function() {
 
 			// values from overrideParams
 			_.each(overrideParams, function(value, key) {
-				var umbeKey = (overrideMap[key] || key);
-				umbeParams[prefix + umbeKey] = value;
+				// only include override params that are in the override map.
+				if (overrideMap[key]) {
+					umbeParams[prefix + overrideMap[key]] = value;
+				}
 			});
 
 			if (overrideParams.playlist_title) {
@@ -477,4 +479,4 @@ ConfigLoader.prototype = {
 	}
 };
 ConfigLoader.version = "0.7.0";
-ConfigLoader.build = "Wed May 21 2014 18:00:14";
+ConfigLoader.build = "Thu May 22 2014 10:53:11";
