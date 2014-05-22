@@ -1,6 +1,6 @@
 {
     "name": "config-loader",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "author": "gianni ferullo <giannif@gmail.com>",
     "scripts": {
         "test": "testem ci -t dist/test/qunit/test.html -l PhantomJS && testem ci -t dist/test/qunit/test-components.html -l PhantomJS && testem ci -t dist/test/qunit/test-bundled.html -l PhantomJS",

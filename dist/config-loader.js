@@ -479,7 +479,7 @@ var ConfigLoader = (function(_, VMAPParser, Url) {
 			}
 		}
 	};
-	ConfigLoader.version = "0.7.0";
-	ConfigLoader.build = "Thu May 22 2014 10:55:40";
+	ConfigLoader.version = "0.8.0";
+	ConfigLoader.build = "Thu May 22 2014 11:00:16";
 	return ConfigLoader;
 })(_, VMAPParser, Url);
