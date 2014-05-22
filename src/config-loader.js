@@ -1,5 +1,5 @@
 /* exported ConfigLoader */
-/* global _, EventEmitter, MediaGen, Config, Url, Request, Images */
+/* global _, EventEmitter, MediaGen, Config, Url, Request, Images, UMBEParams */
 var ConfigLoader = function(options) {
 	this.options = options || {};
 	_.defaults(options, {
@@ -55,15 +55,13 @@ ConfigLoader.prototype = {
 		return undefined;
 	},
 	getMediaGenUrl: function() {
-		var mediaGen = this.options.mediaGenURL || this.config[this.options.mediaGenProperty || "mediaGen"];
+		var config = this.config,
+			mediaGen = this.options.mediaGenURL || config[this.options.mediaGenProperty || "mediaGen"];
 		if (!mediaGen) {
 			this.onError(this.getErrorMessage("no media gen specified."));
 		} else {
-			var mediaGenParams = _.clone(this.options.mediaGenParams);
-			_.each(this.config.overrideParams, function(value, key) {
-				mediaGenParams["UMBEPARAM" + key] = value;
-			});
-			mediaGen = Url.setParameters(template(mediaGen, this.config), mediaGenParams);
+			mediaGen = UMBEParams.append(this.config, mediaGen, this.options);
+			mediaGen = Url.setParameters(template(mediaGen, config), _.clone(this.options.mediaGenParams));
 		}
 		return mediaGen;
 	},
